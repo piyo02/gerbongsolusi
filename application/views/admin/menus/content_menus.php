@@ -103,6 +103,11 @@
                 'label' => "Link",
                 'value' => $group->name."/",
             ),
+            "link_visitor" => array(
+                'type' => 'text',
+                'label' => "Link Pengunjung",
+				'value' => "visitor/",
+            ),
             "list_id" => array(
                 'type' => 'text',
                 'label' => "List ID",
@@ -126,6 +131,14 @@
                       0 => 'Non Aktif',
                 ),
             ),
+            "for_visitor" => array(
+                'type' => 'select',
+                'label' => "Menu Pengunjung",
+                'options' => array(
+                    0 => 'Bukan',
+                    1 => 'Ya',
+                ),
+              ),
             "description" => array(
                 'type' => 'textarea',
                 'label' => "Deskripsi",
@@ -160,6 +173,10 @@
                       'type' => 'text',
                       'label' => "Link",
                   ),
+                  "link_visitor" => array(
+                    'type' => 'text',
+                    'label' => "Link Pengunjung",
+                  ),
                   "list_id" => array(
                       'type' => 'text',
                       'label' => "List ID",
@@ -179,6 +196,14 @@
                             1 => 'Aktif',
                             0 => 'Non Aktif',
                       ),
+                  ),
+                  "for_visitor" => array(
+                    'type' => 'select',
+                    'label' => "Menu Pengunjung",
+                    'options' => array(
+                        0 => 'Bukan',
+                        1 => 'Ya',
+                    ),
                   ),
                   "description" => array(
                       'type' => 'textarea',

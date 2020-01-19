@@ -1,67 +1,94 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-<!-- Content Header (Page header) -->
-<section class="content-header">
-  <h1>
-    <?php echo $page_title ?>
-  </h1>
-  <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Dashboard</li>
-  </ol>
-</section>
-
-<!-- Main content -->
-<section class="content">
-
-  <div class="row"> 
-  <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-yellow">
-        <div class="inner">
-          <h3><?php echo $page_title ?></h3>
-
-          <p>Data Testing</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-person"></i>
-        </div>
-        <a href="" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-primary">
-        <div class="inner">
-          <h3><?php echo $page_title ?><sup style="font-size: 20px"></sup></h3>
+    <!-- /.content-header -->
 
-          <p>Data Uji</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-person"></i>
-        </div>
-        <a href="" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-    
-    <!-- ./col -->
-    <!-- <div class="col-lg-3 col-xs-6">
-      <div class="small-box bg-red">
-        <div class="inner">
-          <h3>65</h3>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?= $client ?></h3>
 
-          <p>Tidak diterima</p>
+                <p>Klien</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="<?= site_url('user/client')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3><?= $division ?></h3>
+
+                <p>Divisi</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="<?= site_url('user/division')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3><?= $employee ?></h3>
+
+                <p>Karyawan</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="<?= site_url('user/team')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3><?= $event ?></h3>
+
+                <p>Event</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="<?= site_url('user/event')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
         </div>
-        <div class="icon">
-          <i class="fa fa-hand-paper-o"></i>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div> -->
-    <!-- ./col -->
+        <!-- /.row -->
+        <!-- Main row -->
+       
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
   </div>
-  </section>
-<!-- /.content -->
-</div>

@@ -86,8 +86,8 @@ defined('EXIT__AUTO_MAX')      or define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 // custom
-define('APP_NAME', 'FIXLIgniter');
+define('APP_NAME', 'Gerbong Solusi');
 define('APP_AUTHOR', 'FIXL Labs');
 define('APP_DESC', 'FIXL base core for creating Information System base on Codeigniter');
-define('FAVICON_IMAGE', 'assets/logo/favicon.ico');
-define('ICON_IMAGE', 'assets/logo/coreigniter.png');
+define('FAVICON_IMAGE', 'assets/logo/logo-gsm.png');
+define('ICON_IMAGE', 'assets/logo/logo-gsm.png');

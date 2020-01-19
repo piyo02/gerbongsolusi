@@ -65,6 +65,11 @@ class Menus extends Admin_Controller {
 				'label' => "Link",
 				'value' => $group->name."/",
 			  ),
+			  "link_visitor" => array(
+				'type' => 'text',
+				'label' => "Link Pengunjung",
+				'value' => "visitor/",
+			  ),
 			  "list_id" => array(
 				'type' => 'text',
 				'label' => "List ID",
@@ -86,6 +91,14 @@ class Menus extends Admin_Controller {
 				'options' => array(
 					1 => 'Aktif',
 					0 => 'Non Aktif',
+				),
+			  ),
+			  "for_visitor" => array(
+				'type' => 'select',
+				'label' => "Menu Pengunjung",
+				'options' => array(
+					0 => 'Bukan',
+					1 => 'Ya',
 				),
 			  ),
 			  "description" => array(
@@ -134,12 +147,14 @@ class Menus extends Admin_Controller {
         {
 			$data['name'] = $this->input->post( 'name' );
 			$data['link'] = $this->input->post( 'link' );
+			$data['link_visitor'] = $this->input->post( 'link_visitor' );
 			$data['list_id'] = $this->input->post( 'list_id' );
 			$data['icon'] = $this->input->post( 'icon' );
 			$data['position'] = $this->input->post( 'position' );
 			$data['status'] = $this->input->post( 'status' );
 			$data['description'] = $this->input->post( 'description' );
 			$data['menu_id'] = $this->input->post( 'menu_id' );
+			$data['for_visitor'] = $this->input->post( 'for_visitor' );
 
 			if( $this->Menu_model->create( $data ) ){
 				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::SUCCESS, $this->Menu_model->messages() ) );
@@ -167,11 +182,13 @@ class Menus extends Admin_Controller {
         {
 			$data['name'] = $this->input->post( 'name' );
 			$data['link'] = $this->input->post( 'link' );
+			$data['link_visitor'] = $this->input->post( 'link_visitor' );
 			$data['list_id'] = $this->input->post( 'list_id' );
 			$data['icon'] = $this->input->post( 'icon' );
 			$data['position'] = $this->input->post( 'position' );
 			$data['status'] = $this->input->post( 'status' );
 			$data['description'] = $this->input->post( 'description' );
+			$data['for_visitor'] = $this->input->post( 'for_visitor' );
 
 			$data_param['id'] = $this->input->post( 'id' );
 

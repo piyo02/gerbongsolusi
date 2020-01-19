@@ -1,5 +1,5 @@
 <div  class="table-responsive ">
-    <table class="table table-striped table-bordered table-hover  ">
+    <table id='table' class="table table-striped table-bordered table-hover  ">
         <thead class="thin-border-bottom" style="font-size:12px" >
         <tr>
             <th style="width:50px">No</th>
@@ -17,9 +17,9 @@
             foreach( $rows as $ind => $row ):
         ?>
         <tr >
-            <td> <?php echo $no ++ ?> </td>
+            <td data-title="No"> <?php echo $no ++ ?> </td>
             <?php foreach( $header as $key => $value ):?>
-                <td  >
+                <td data-title=' <?= $value ?>'>
                     <?php 
                         $attr = "";
                         if( is_numeric( $row->$key ) && ( $key != 'phone' && $key != 'username' && $key != 'code' && $key != 'year' ) )
@@ -81,3 +81,14 @@
         </tbody>
     </table>
 </div>  
+<script>
+    var width = window.innerWidth;
+    console.log(width);
+    var element = document.getElementById('table');
+
+    if (width <= 600) {
+        element.classList.add('rg-table');
+    } else {
+        element.classList.remove('rg-table');
+    }
+</script>
