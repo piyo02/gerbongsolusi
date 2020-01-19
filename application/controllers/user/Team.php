@@ -137,7 +137,7 @@ class Team extends User_Controller {
 			$data['position_id'] = $this->input->post( 'position_id' );
 			$data['description'] = $this->input->post( 'description' );
 
-			$data['image'] = $this->upload_image();
+			$data['image'] = $this->upload_image( $division_id );
 
 			if( $this->employee_model->create( $data ) ){
 				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::SUCCESS, $this->employee_model->messages() ) );
@@ -169,7 +169,7 @@ class Team extends User_Controller {
 			$data['description'] = $this->input->post( 'description' );
 
 			if($_FILES['image']['name'])
-				$data['image'] = $this->upload_image();
+				$data['image'] = $this->upload_image( $division_id );
 
 
 			if( $this->employee_model->update( $data, $data_param  ) ){
@@ -206,7 +206,7 @@ class Team extends User_Controller {
 		redirect( site_url($this->current_page) . 'division/' . $division_id );
 	}
 
-	public function upload_image(  )
+	public function upload_image( $division_id = 1 )
 	{
 		$upload = $this->config->item('upload', 'ion_auth');
 
@@ -214,7 +214,7 @@ class Team extends User_Controller {
 		$upload_path = 'uploads/employee/';
 
 		$config 				= $upload;
-		$config['file_name'] 	=  $_file['name'];
+		$config['file_name'] 	=  "EMPLOYEE_DIVISION__" . $division_id . '__' . time();
 		$config['upload_path']	= './' . $upload_path;
 		// var_dump($file['name']); die;
 		$this->load->library('upload', $config);

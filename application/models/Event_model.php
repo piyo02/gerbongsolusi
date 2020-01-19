@@ -144,7 +144,10 @@ class Event_model extends MY_Model
   {
     $this->select($this->table . '.*');
     $this->select($this->table . '.image AS image_old');
-    $this->select('CONCAT( "'.base_url('uploads/event/photo/').'", image ) AS image');
+    if( $is_news )
+      $this->select('CONCAT( "'.base_url('uploads/news/photo/').'", image ) AS image');
+    else
+      $this->select('CONCAT( "'.base_url('uploads/event/photo/').'", image ) AS image');
     if (isset( $limit ))
       {
         $this->limit( $limit );

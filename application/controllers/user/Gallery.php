@@ -79,7 +79,7 @@ class Gallery extends User_Controller {
 			$data['name'] = $this->input->post( 'name' );
 			$data['event_id'] = $this->input->post( 'event_id' );
 			$data['thumbnail'] = $this->input->post( 'thumbnail' );
-			$data['file'] = $this->upload_image();
+			$data['file'] = $this->upload_image( $event_id );
 
 			if( $this->gallery_model->create( $data ) ){
 				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::SUCCESS, $this->gallery_model->messages() ) );
@@ -109,7 +109,7 @@ class Gallery extends User_Controller {
 			$data['thumbnail'] = $this->input->post( 'thumbnail' );
 
 			if($_FILES['file']['name'])
-				$data['file'] = $this->upload_image();
+				$data['file'] = $this->upload_image( $event_id );
 
 			$data_param['id'] = $this->input->post( 'id' );
 
@@ -144,7 +144,7 @@ class Gallery extends User_Controller {
 		}
 		redirect( site_url($this->current_page) . 'event/' . $event_id );
 	}
-	public function upload_image(  )
+	public function upload_image( $event_id = 1 )
 	{
 		$upload = $this->config->item('upload', 'ion_auth');
 
@@ -152,7 +152,7 @@ class Gallery extends User_Controller {
 		$upload_path = 'uploads/gallery/';
 
 		$config 				= $upload;
-		$config['file_name'] 	=  $file['name'];
+		$config['file_name'] 	=  'GALLERY_EVENT_' . $event_id . "__" . time();
 		$config['upload_path']	= './' . $upload_path;
 		// var_dump($file['name']); die;
 		$this->load->library('upload', $config);

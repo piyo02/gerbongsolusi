@@ -169,7 +169,7 @@ class Client extends User_Controller {
 		$upload_path = 'uploads/client/';
 
 		$config 				= $upload;
-		$config['file_name'] 	=  $file['name'];
+		$config['file_name'] 	=  'CLIENT__' . time();
 		$config['upload_path']	= './' . $upload_path;
 		// var_dump($file['name']); die;
 		$this->load->library('upload', $config);
