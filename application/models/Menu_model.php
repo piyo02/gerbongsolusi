@@ -5,6 +5,7 @@ class Menu_model extends MY_Model
 {
     protected $table = "menus";
     protected $menu_list = array();
+    protected $menu_list_visitor = array();
 
     function __construct() {
         parent::__construct( $this->table );
@@ -169,6 +170,35 @@ class Menu_model extends MY_Model
 	public function get_menu_list( )
   {	
       return $this->menu_list;
+  }
+
+  public function menus_for_visitor( $menu_id = NULL )
+  {
+      if( isset( $menu_id ) )
+      {
+        $this->where($this->table.'.menu_id', $menu_id);
+      }
+      $this->where( $this->table . '.for_visitor', 1 );
+      $this->order_by($this->table.'.position', 'asc');
+      return $this->fetch_data();
+  }
+  public function tree_visitor( $menu_id = 0 )
+  {	
+      $tree = $this->menus_for_visitor( $menu_id )->result();
+      // echo json_encode( $tree );
+      // echo "<br>";
+      if( empty( $tree ) )
+      {
+        return array();
+      }
+      foreach( $tree as $branch )
+      {
+        
+				$this->menu_list_visitor[] = $branch;	
+        $branch->branch = $this->tree_visitor( $branch->id );
+      }
+
+      return $tree;
   }
 ################################################################################
 

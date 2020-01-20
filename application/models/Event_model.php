@@ -105,7 +105,7 @@ class Event_model extends MY_Model
    * @return static
    * @author madukubah
    */
-  public function event( $id = NULL  )
+  public function event( $id = NULL, $is_news = 0 )
   {
       if (isset($id))
       {
@@ -115,7 +115,7 @@ class Event_model extends MY_Model
       $this->limit(1);
       $this->order_by($this->table.'.id', 'desc');
 
-      $this->events(  );
+      $this->events( 0, NULL, $is_news );
 
       return $this;
   }

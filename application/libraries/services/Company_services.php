@@ -30,6 +30,18 @@ class Company_services
       $table["number"] = $start_number;
     return $table;
   }
+  public function get_file_upload_config( $name )
+  {
+    // $name = str_replace( "(" )
+    // $filename = "EVENT_".$name."_".time().".html";
+    $filename = "COMPANY__.html";
+    $upload_path = 'uploads/logo/';
+
+    $config['upload_path'] = './'.$upload_path;
+    $config['file_name'] = ''.$filename;
+
+    return $config;
+  }
   public function validation_config( ){
     $config = array(
         array(
@@ -123,16 +135,16 @@ class Company_services
         'label' => 'Id',
         'value' => $this->form_validation->set_value('image_old', $this->image_old),
       ),
-      'description' => array(
-        'type' => 'textarea',
-        'label' => 'Deskripsi Perusahaan',
-        'value' => $this->form_validation->set_value('description', $this->description),
-      ),
-      // 'summernote' => array(
+      // 'description' => array(
       //   'type' => 'textarea',
       //   'label' => 'Deskripsi Perusahaan',
       //   'value' => $this->form_validation->set_value('description', $this->description),
       // ),
+      'summernote' => array(
+        'type' => 'textarea',
+        'label' => 'Deskripsi Perusahaan',
+        'value' => $this->form_validation->set_value('description', $this->description),
+      ),
     );
     return $form_data;
   }

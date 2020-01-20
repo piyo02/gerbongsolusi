@@ -32,7 +32,7 @@ class News extends User_Controller {
 		#################################################################3
 		$table = $this->services->get_table_config( $this->current_page );
 		$table[ "rows" ] = $this->event_model->events( $pagination['start_record'], $pagination['limit_per_page'], 1 )->result();
-		$table = $this->load->view('templates/tables/plain_table', $table, true);
+		$table = $this->load->view('templates/tables/plain_table_image', $table, true);
 		$this->data[ "contents" ] = $table;
 		$add_menu = array(
 			"name" => "Tambah Berita",
@@ -66,7 +66,7 @@ class News extends User_Controller {
         {
 			$data['category_id'] = $this->input->post( 'category_id' );
 			$data['title'] = $this->input->post( 'title' );
-			$data['date'] = $this->input->post( 'date' );
+			$data['date'] = date('Y-m-d', strtotime($this->input->post( 'date' )));
 			$data['preview'] = $this->input->post( 'preview' );
 			$data['hit'] = 0;
 			$data['is_news'] = 1;
@@ -133,7 +133,7 @@ class News extends User_Controller {
 		}
 	}
 
-	public function edit( $event_id = NULL )
+	public function edit( $news_id = NULL )
 	{
 
 		// echo var_dump( $data );return;
@@ -142,7 +142,7 @@ class News extends User_Controller {
         {
 			$data['category_id'] = $this->input->post( 'category_id' );
 			$data['title'] = $this->input->post( 'title' );
-			$data['date'] = $this->input->post( 'date' );
+			$data['date'] = date('Y-m-d', strtotime($this->input->post( 'date' )));
 			$data['preview'] = $this->input->post( 'preview' );
 			$data['timestamp'] = time();
 

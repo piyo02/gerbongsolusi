@@ -139,6 +139,10 @@ class Public_Controller extends MY_Controller{
 
   function __construct(){
 		parent::__construct();
+		$this->load->model(array(
+			'menu_model',
+		));
+		$this->data[ "_menus" ] = $this->menu_model->tree_visitor( 3 );
   }
 
   protected function render($the_view = NULL, $template = 'public_master'){

@@ -100,8 +100,19 @@ class Company extends User_Controller {
 			$data['objectif'] = $this->input->post( 'objectif' );
 			$data['exist'] = date( 'Y-m-d', strtotime($this->input->post( 'exist' )) );
 			$data['address'] = $this->input->post( 'address' );
-			$data['description'] = $this->input->post( 'description' );
+			// $data['description'] = $this->input->post( 'description' );
 			// $data['description'] = $this->input->post( 'summernote' );
+
+			$config =  $this->services->get_file_upload_config( 'description' );
+
+			if( file_put_contents( $config['upload_path'].$config['file_name'] , $this->input->post( 'summernote' ))  )
+			{
+				$data['description'] = $config['file_name'];
+			}
+			else
+			{
+				$data['description'] = "default.html";
+			}
 
 			if( $this->input->post( 'id' ) ){
 				$data_param['id'] = $this->input->post( 'id' );

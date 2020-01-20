@@ -147,11 +147,11 @@ class News_services
     ));
     if( $event_id != NULL )
     {
-        $event = $this->event_model->event( $event_id )->row();
+        $event = $this->event_model->event( $event_id, 1 )->row();
         $this->id           = $event->id;
         $this->category_id  = $event->category_id;
         $this->title        = $event->title;
-        $this->user_id      = $event->user_id;
+        $this->date      = $event->date;
         $this->image        = $event->image;
         $this->preview        = $event->preview;
         $this->file_content = $event->file_content;
