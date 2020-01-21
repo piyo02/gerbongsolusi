@@ -131,6 +131,7 @@ class Contact_model extends MY_Model
   {
     $this->select( $this->table . '.*' );
     $this->select( 'icon.name AS icon_name' );
+    $this->select( 'icon.url AS url' );
     $this->select('CONCAT( "'.base_url('uploads/icon/').'", icon.file ) AS image');
     $this->join(
       'icon',

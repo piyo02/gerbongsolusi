@@ -9,14 +9,17 @@ class News extends Public_Controller {
 		$this->load->model(array(
 			'gallery_model',
 			'event_model',
+			'contact_model',
 			'category_model',
 		));
 	}
 	public function index()
 	{
 		// TODO : tampilkan landing page bagi user yang belum daftar
+		$contacts = $this->contact_model->contacts( 1 )->result();
 		$this->data['news'] = $this->event_model->events( 0, NULL, 1 )->result();
 		$this->data['current_page'] = site_url('visitor/news/');
+		$this->data['contacts'] = $contacts;
 		// var_dump($this->data['news']); die;
 		$this->render("visitor/news", 'visitor_master');
 	}

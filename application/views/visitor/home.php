@@ -3,21 +3,26 @@
                 <div class="container">
                     <div class="card bg-dark">
                         <div class="card-body">
-                            <div class="row mt-3 mb-3">
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="col-6 text-center mb-5">
-                                        <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                            <defs>
-                                                <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
-                                                    <image xlink:href="<?= base_url('users-assets/') ?>image/logo-gsm.png" x="10" y="20" width="80"/>
-                                                </pattern>
-                                            </defs>
-                                            <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
-                                        </svg>
-                                        <h6 class="text-danger font-weight-bolder mt-2">Gerbong Solusi</h6>
-                                        <h5 class="text-white font-weight-bolder">Management</h5>
-
-                                        <img src="<?= base_url('uploads/logo/eo.png') ?>" alt="logo-eo" class="mt-5">
+                            <div class="row mt-3 mb-3 justify-content-center">
+                                <div class="col-lg-3 col-md-12 col-sm-12">
+                                    <div class="col-lg-10 col-md-12 col-sm-12 text-center mb-5">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-12 col-md-4 col-sm-4">
+                                                <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                    <defs>
+                                                        <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+                                                            <image xlink:href="<?= base_url('users-assets/') ?>image/logo-gsm.png" x="10" y="20" width="80"/>
+                                                        </pattern>
+                                                    </defs>
+                                                    <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+                                                </svg>
+                                                <h6 class="text-danger font-weight-bolder mt-2">Gerbong Solusi</h6>
+                                                <h5 class="text-white font-weight-bolder">Management</h5>
+                                            </div>
+                                            <div class="col-lg-12 col-md-4 col-sm-4">
+                                                <img src="<?= base_url('uploads/logo/eo.png') ?>" alt="logo-eo" class="mt-5">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-md-12 col-sm-12 mt-3">
@@ -100,12 +105,12 @@
                         <?php foreach ($events as $key => $event) :?>
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="row">
-                                <div class="col-lg-7 col-sm-12">
-                                    <div class="card" style="width: 15rem;">
+                                <div class="col-lg-7 col-md-12 col-sm-5">
+                                    <div class="card" style="width: 100%;">
                                         <img src="<?= $event->image ?>" class="card-img-top" alt="" style="padding: 1px;">
                                     </div>
                                 </div>
-                                <div class="col-lg-5 col-sm-8">
+                                <div class="col-lg-5 col-md-12 col-sm-7">
                                     <a class="font-weight-bolder text-white" href="<?= site_url('visitor/news/article/') . $event->file_content ?>"><?= $event->title ?></a>
                                 </div>
                             </div>
