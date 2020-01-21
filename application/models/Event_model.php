@@ -168,10 +168,27 @@ class Event_model extends MY_Model
         $this->limit( $limit );
       }
       $this->offset( $start );
-      $this->order_by($this->table.'.id', 'asc');
+      $this->order_by($this->table.'.date', 'asc');
       $this->where( $this->table . '.is_news', $is_news );
       return $this->fetch_data();
   }
 
+  public function events_most_popular( $start = 0, $limit = NULL, $is_news = 0 )
+  {
+    $this->select($this->table . '.*');
+    $this->select($this->table . '.image AS image_old');
+    if( $is_news )
+      $this->select('CONCAT( "'.base_url('uploads/news/photo/').'", image ) AS image');
+    else
+      $this->select('CONCAT( "'.base_url('uploads/event/photo/').'", image ) AS image');
+    if (isset( $limit ))
+      {
+        $this->limit( $limit );
+      }
+      $this->offset( $start );
+      $this->order_by($this->table.'.hit', 'desc');
+      $this->where( $this->table . '.is_news', $is_news );
+      return $this->fetch_data();
+  }
 }
 ?>

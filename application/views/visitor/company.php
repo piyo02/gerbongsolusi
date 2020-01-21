@@ -28,6 +28,10 @@
                                             <?= $contact->contact ?>
                                         </div>
                                     <?php endforeach ?>
+                                        <div class="col-12 mb-2 text-white">
+                                            <img src="<?= base_url('users-assets/icon/')?>mark-point.png" alt="address" width="25px">
+                                            <?= $company->address ?>
+                                        </div>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-sm-12">
@@ -44,16 +48,38 @@
 
             <div class="content">
                 <div class="container">
-                    <div class="media">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-12 order-sm-2">
-                                <img src="<?= base_url('users-assets/') ?>icon/icon-mission.png" alt="" width="100%">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="col-12 text-center">
+                                <h3 class="text-white font-weight-bolder">Visi</h3>
                             </div>
-                            <div class="col-lg-10 col-sm-12 text-white order-sm-1">
-                                <div class="media-body">
-                                    <h5 class="mt-0">Center-aligned media</h5>
-                                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            <div class="media">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img id="icon-mission" src="<?= base_url('users-assets/') ?>icon/icon-mission.png" alt="" width="100%">
+                                    </div>
+                                    <div class="col-10 text-white">
+                                        <div class="media-body text-justify">
+                                            <?= $company->perspective ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="col-12 text-center">
+                                <h3 class="text-white font-weight-bolder">Misi</h3>
+                            </div>
+                            <div class="media">
+                                <div class="row">
+                                    <div class="col-10 text-white">
+                                        <div class="media-body text-justify">
+                                            <?= $company->objectif ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <img id="icon-vision" src="<?= base_url('users-assets/') ?>icon/target.png" alt="" width="100%">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -74,29 +100,3 @@
             </footer>
         </div>
     </div> -->
-
-    <script src="<?= base_url('users-assets/') ?>bootstrap/js/bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('.customer-logos').slick({
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1500,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-            }]
-        });
-    });
-    </script>

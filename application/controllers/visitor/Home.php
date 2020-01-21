@@ -10,12 +10,23 @@ class Home extends Public_Controller {
 			'group_model',
 			'event_model',
 			'category_model',
+			'client_model',
 		));
 	}
 	public function index()
 	{
-		// TODO : tampilkan landing page bagi user yang belum daftar
-		// var_dump($this->data['_menus']); die;
+		$start = 0;
+		$limit = 3;
+		$is_news = 1;
+		$this->data['events'] = $this->event_model->events( $start, $limit, $is_news )->result();
+		
+		// $this->data['clients'] = array();
+		$this->data['clients'] = $this->client_model->clients(  )->result();
+
+		$limit = 5;
+		$this->data['events_most_popular'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
+		// var_dump($this->data['events']); die;
+
 		$this->render("visitor/home", 'visitor_master');
 	}
 }

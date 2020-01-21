@@ -98,7 +98,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="card mt-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <img src="<?= base_url('users-assets/') ?>image/1.png" alt="" width="50px">
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="last-event">
+                                                    <a href="#"><h6><b>Judul Event</b></h6></a>
+                                                    <p style="font-size: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>

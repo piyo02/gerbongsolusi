@@ -25,7 +25,7 @@ class Company extends Public_Controller {
 		$this->data['file_content'] = $file_content;
 		$this->data['company'] = $company;
 		$this->data['contacts'] = $contacts;
-		// var_dump($contacts); die;
+		// var_dump($company); die;
 		// TODO : tampilkan landing page bagi user yang belum daftar
 		$this->render("visitor/company", 'visitor_master');
 	}

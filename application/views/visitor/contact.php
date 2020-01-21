@@ -1,3 +1,13 @@
+<style>
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
             <div>
                 <div class="content mt-5 mb-5">
                     <div class="container-fluid">
@@ -71,7 +81,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG2ZezpfymC0RGIp_eGhHxTM&key=AIzaSyA4-TBKVqXi0aF2U1-MtRe_y4tT9krvTNc" allowfullscreen></iframe>
+                <div id="map"></div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -79,6 +89,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4-TBKVqXi0aF2U1-MtRe_y4tT9krvTNc&callback=initMap" async defer></script>
     <!-- <div class="content">
         <div class="contaier">
             <footer class="main-footer">
