@@ -153,7 +153,7 @@ class News extends User_Controller {
 			$title = str_replace( ".", "_",   $data['title']  ); // Load librari upload
 			$title = str_replace( "/", "_",   $title  ); // Load librari upload
 			$config = $this->services->get_photo_upload_config( $title );
-
+			
 			$this->upload->initialize( $config );
 			// echo var_dump( $_FILES ); return;
 			if( $_FILES['image']['name'] != "" )
@@ -168,7 +168,7 @@ class News extends User_Controller {
 				redirect( site_url($this->current_page)  );
 			}
 			// buat content html
-
+			// var_dump($title); die;
 			$config =  $this->services->get_file_upload_config( $title );
 			if( file_put_contents( $config['upload_path'].$config['file_name'], $this->input->post( 'summernote' ))  )
 			{

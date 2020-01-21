@@ -102,7 +102,7 @@ class Company extends User_Controller {
 			$data['address'] = $this->input->post( 'address' );
 			// $data['description'] = $this->input->post( 'description' );
 			// $data['description'] = $this->input->post( 'summernote' );
-
+			// var_dump($this->input->post( 'summernote' )); die;
 			$config =  $this->services->get_file_upload_config( 'description' );
 
 			if( file_put_contents( $config['upload_path'].$config['file_name'] , $this->input->post( 'summernote' ))  )

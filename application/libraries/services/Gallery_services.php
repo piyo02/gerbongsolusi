@@ -16,7 +16,7 @@ class Gallery_services
   public function get_table_config( $_page, $start_number = 1 )
   {
       $table["header"] = array(
-        'name' => 'Nama',
+        // 'name' => 'Nama',
         'image' => 'Dokumentasi',
         'thumbnail' => 'Preview',
       );
@@ -88,11 +88,11 @@ class Gallery_services
   }
   public function validation_config( ){
     $config = array(
-        array(
-          'field' => 'name',
-          'label' => 'name',
-          'rules' =>  'trim|required',
-        ),
+        // array(
+        //   'field' => 'name',
+        //   'label' => 'name',
+        //   'rules' =>  'trim|required',
+        // ),
         array(
           'field' => 'thumbnail',
           'label' => 'Preview',

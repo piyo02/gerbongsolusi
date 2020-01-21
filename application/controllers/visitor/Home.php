@@ -5,7 +5,12 @@ class Home extends Public_Controller {
 
 	function __construct()
 	{
-			parent::__construct();
+		parent::__construct();
+		$this->load->model(array(
+			'group_model',
+			'event_model',
+			'category_model',
+		));
 	}
 	public function index()
 	{

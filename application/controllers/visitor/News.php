@@ -7,7 +7,7 @@ class News extends Public_Controller {
 	{
 		parent::__construct();
 		$this->load->model(array(
-			'group_model',
+			'gallery_model',
 			'event_model',
 			'category_model',
 		));
@@ -16,7 +16,30 @@ class News extends Public_Controller {
 	{
 		// TODO : tampilkan landing page bagi user yang belum daftar
 		$this->data['news'] = $this->event_model->events( 0, NULL, 1 )->result();
+		$this->data['current_page'] = site_url('visitor/news/');
 		// var_dump($this->data['news']); die;
 		$this->render("visitor/news", 'visitor_master');
+	}
+	public function article( $article )
+	{
+		$news = $this->event_model->event_by_file_content( $article, 1 )->row();
+		
+		// $data['hit'] = $news->hit + 1;
+		// $data_param['id'] = $news->id;
+		// $this->event_model->update( $data, $data_param )->row();
+		
+		$galleries = $this->gallery_model->galleries_by_event_id( $news->id )->result();
+		// var_dump( $galleries ); die;
+		
+		$upload_path = 'uploads/news/';
+
+		$config['upload_path'] = './'.$upload_path;
+		$file = str_replace( "%20", " ", $article );
+		$file_content = file_get_contents(  $config['upload_path'] . $file );
+
+		$this->data['article'] = $news;
+		$this->data['galleries'] = $galleries;
+		$this->data['file_content'] = $file_content;
+		$this->render("visitor/plain_article", 'visitor_master');
 	}
 }

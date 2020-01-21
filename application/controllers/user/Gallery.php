@@ -28,11 +28,6 @@ class Gallery extends User_Controller {
 			"button_color" => "primary",
 			"url" => site_url( $this->current_page."add/"),
 			"form_data" => array(
-				"name" => array(
-					'type' => 'text',
-					'label' => "Nama",
-					'value' => "",
-				),
 				"event_id" => array(
 					'type' => 'hidden',
 					'label' => "Nama",
@@ -76,11 +71,11 @@ class Gallery extends User_Controller {
 		$this->form_validation->set_rules( $this->services->validation_config() );
         if ($this->form_validation->run() === TRUE )
         {
-			$data['name'] = $this->input->post( 'name' );
 			$data['event_id'] = $this->input->post( 'event_id' );
 			$data['thumbnail'] = $this->input->post( 'thumbnail' );
 			$data['file'] = $this->upload_image( $event_id );
-
+			$data['name'] = $data['file'];
+			
 			if( $this->gallery_model->create( $data ) ){
 				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::SUCCESS, $this->gallery_model->messages() ) );
 			}else{
@@ -108,8 +103,10 @@ class Gallery extends User_Controller {
 			$data['name'] = $this->input->post( 'name' );
 			$data['thumbnail'] = $this->input->post( 'thumbnail' );
 
-			if($_FILES['file']['name'])
+			if($_FILES['file']['name']){
 				$data['file'] = $this->upload_image( $event_id );
+				$data['name'] = $data['file'];
+			}
 
 			$data_param['id'] = $this->input->post( 'id' );
 

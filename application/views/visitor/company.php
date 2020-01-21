@@ -8,8 +8,8 @@
                             </div>
                         </div>
                         <div class="row col-12">
-                            <div class="col-lg-3 col-sm-12">
-                                <div class="col-8 text-center">
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="col-8 text-center mb-5">
                                     <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                         <defs>
                                             <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
@@ -22,13 +22,18 @@
                                     <h5 class="text-white font-weight-bolder">Management</h5>
                                 </div>
                                 <div class="col-12">
-
+                                    <?php foreach ($contacts as $key => $contact) : ?>
+                                        <div class="col-12 mb-2 text-white">
+                                            <img src="<?= $contact->image ?>" alt="<?= $contact->icon_name ?>" width="25px">
+                                            <?= $contact->contact ?>
+                                        </div>
+                                    <?php endforeach ?>
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-sm-12">
+                            <div class="col-lg-8 col-sm-12">
                                 <div class="card">
                                     <div class="card-body">
-
+                                        <?= $file_content ?>
                                     </div>
                                 </div>
                             </div>

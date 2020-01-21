@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Company_services
 {
+  const CONTENT_PATH = './uploads/logo/';
   private $id = null;
   private $name = null;
   private $perspective = null;
@@ -49,11 +50,11 @@ class Company_services
           'label' => 'name',
           'rules' =>  'trim|required',
         ),
-        array(
-          'field' => 'description',
-          'label' => 'description',
-          'rules' =>  'trim|required',
-        ),
+        // array(
+        //   'field' => 'description',
+        //   'label' => 'description',
+        //   'rules' =>  'trim|required',
+        // ),
         array(
           'field' => 'perspective',
           'label' => 'Visi',
@@ -92,6 +93,15 @@ class Company_services
       $this->image = $company->image;
       $this->image_old = $company->image_old;
       $this->description = $company->description;
+    }
+
+    if( file_exists( Company_services::CONTENT_PATH . $this->description ) )
+    {
+      $description = file_get_contents( Company_services::CONTENT_PATH . $this->description );
+    }
+    else
+    {
+      $description = "";
     }
 
     $form_data['form_data'] = array(
@@ -143,7 +153,7 @@ class Company_services
       'summernote' => array(
         'type' => 'textarea',
         'label' => 'Deskripsi Perusahaan',
-        'value' => $this->form_validation->set_value('description', $this->description),
+        'value' => $this->form_validation->set_value('description', $description),
       ),
     );
     return $form_data;

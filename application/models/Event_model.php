@@ -119,6 +119,21 @@ class Event_model extends MY_Model
 
       return $this;
   }
+
+  public function event_by_file_content( $file_content = NULL, $is_news = 0 )
+  {
+      if (isset($file_content))
+      {
+        $this->where($this->table.'.file_content', $file_content);
+      }
+
+      $this->limit(1);
+      $this->order_by($this->table.'.id', 'desc');
+
+      $this->events( 0, NULL, $is_news );
+
+      return $this;
+  }
   // /**
   //  * events
   //  *

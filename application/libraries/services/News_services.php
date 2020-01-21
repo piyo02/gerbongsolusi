@@ -43,7 +43,7 @@ class News_services
   {
     // $name = str_replace( "(" )
     // $filename = "NEWS_".$name."_".time().".html";
-    $filename = "NEWS__".time().".html";
+    $filename = "NEWS__" .time().".html";
     $upload_path = 'uploads/news/';
 
     $config['upload_path'] = './'.$upload_path;

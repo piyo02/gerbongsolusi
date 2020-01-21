@@ -1,7 +1,7 @@
 <body>
     <div id="bg">
-        <nav class="navbar navbar-expand-lg navbar-dark mb-3">  <!-- navbar-light bg-light-->
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: rgba(0, 0, 0, 0.4)">  <!-- navbar-light bg-light-->
+            <div class=" mt-1 container">
                 <a class="navbar-brand" href="#">
                     <img src="<?= base_url('users-assets/') ?>image/logo-gsm.png" height="30" class="d-inline-block align-top" alt="">
                     <span class="text-white">

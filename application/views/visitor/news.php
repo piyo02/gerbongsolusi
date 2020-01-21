@@ -1,14 +1,20 @@
             <div class="content mb-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 mb-3 row">
+                        <div class="col-12 mb-3 row " >
                             <div class="col-lg-6 col-sm-12 mb-3">
                                 <img src="<?= base_url('users-assets/') ?>image/event-1.jpg" class="card-img-top" alt="...">
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <div class="row mb-4">
                                     <div class="col-6">
-                                        <img src="<?= base_url('users-assets/') ?>image/event-2.jpg" width="18rem" class="card-img-top" alt="...">
+                                        <div class="carousel-item active">
+                                            <img src="<?= base_url('users-assets/') ?>image/event-2.jpg" class="d-block w-100" alt="name">
+                                            <div id='main-slider' class="carousel-caption d-none d-block mr-5">
+                                                <p>Cocok nih buat liburan di akhir pekan. Murah meriah dan pemandangannya juara!</p>
+                                            </div>
+                                        </div>
+                                        <!-- <img src="<?= base_url('users-assets/') ?>image/event-2.jpg" width="18rem" class="card-img-top" alt="..."> -->
                                     </div>
                                     <div class="col-6">
                                         <img src="<?= base_url('users-assets/') ?>image/event-3.jpg" width="18rem" class="card-img-top" alt="...">
@@ -36,7 +42,7 @@
                                             </div>
                                             <div class="col-lg-8 col-sm-12">
                                                 <div class="event">
-                                                    <a href="#"><h5><b><?= $new->title ?></b></h5></a>
+                                                    <a href="<?= $current_page . 'article/' . $new->file_content ?>"><h5><b><?= $new->title ?></b></h5></a>
                                                     <div>
                                                         <span style="font-size: 0.8em;" class="mr-2 text-white">Gerbong Solusi Management</span>
                                                         <span style="font-size: 0.8em;" class="text-white"><?= date('d M Y', strtotime($new->date)) ?></span>
@@ -52,7 +58,7 @@
                             <div class="col-lg-3 col-sm-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5>Event Terbaru</h5>
+                                        <h5>Event Terpopuler</h5>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
