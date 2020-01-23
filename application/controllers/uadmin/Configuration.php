@@ -34,6 +34,11 @@ class Configuration extends Uadmin_Controller {
 					'label' => "Nama Icon",
 					'value' => "",
 				),
+				"url" => array(
+					'type' => 'text',
+					'label' => "URL",
+					'value' => "",
+				),
 				"description" => array(
 					'type' => 'textarea',
 					'label' => "Deskripsi",
@@ -72,6 +77,7 @@ class Configuration extends Uadmin_Controller {
         if ($this->form_validation->run() === TRUE )
         {
 			$data['name'] = $this->input->post( 'name' );
+			$data['url'] = $this->input->post( 'url' );
 			$data['description'] = $this->input->post( 'description' );
 			
 			// $title = str_replace( ".", "_",   $data['title']  ); // Load librari upload
@@ -103,6 +109,7 @@ class Configuration extends Uadmin_Controller {
         if ($this->form_validation->run() === TRUE )
         {
 			$data['name'] = $this->input->post( 'name' );
+			$data['url'] = $this->input->post( 'url' );
 			$data['description'] = $this->input->post( 'description' );
 
 			if($_FILES['image']['name'])

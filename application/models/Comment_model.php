@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Comment_model extends MY_Model
 {
   protected $table = "comment";
+  protected $comment_list = array();
 
   function __construct() {
       parent::__construct( $this->table );
@@ -139,5 +140,47 @@ class Comment_model extends MY_Model
       return $this->fetch_data();
   }
 
+  public function comments_by_event_id( $event_id = NULL, $comment_id = NULL )
+  {
+    $this->select( $this->table . '.*' );
+    $this->select('visitor.username AS username');
+    $this->select('visitor.image AS image');
+    if( isset( $event_id ) )
+      {
+        $this->where($this->table.'.event_id', $event_id);
+      }
+      $this->where($this->table.'.comment_id', $comment_id);
+      $this->join(
+        'visitor',
+        'visitor.id = comment.visitor_id',
+        'inner'
+      );
+      $this->order_by($this->table.'.id', 'asc');
+      return $this->fetch_data();
+  }
+
+  public function tree( $event_id = 0, $comment_id = NULL )
+  {
+    $tree = $this->comments_by_event_id( $event_id, $comment_id )->result();
+    // echo json_encode( $tree );
+    // echo "<br>";
+    if( empty( $tree ) )
+    {
+      return array();
+    }
+    foreach( $tree as $branch )
+    {
+      $this->comment_list[] = $branch;
+      $branch->branch = $this->tree( $event_id, $branch->id );
+      // var_dump($this->tree( $event_id, $branch->id )); die;
+    }
+
+      return $tree;
+  }
+
+  public function get_comment_list( )
+  {	
+      return $this->comment_list;
+  }
 }
 ?>

@@ -24,9 +24,10 @@ class Home extends Public_Controller {
 		$this->data['clients'] = $this->client_model->clients(  )->result();
 
 		$limit = 5;
-		$this->data['events_most_popular'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
+		$data['events'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
+		$gallery['content_heroArea'] = $this->load->view('visitor/slider', $data, true );
+		$this->data['heroArea'] = $this->load->view('templates/_visitor_parts/hero_area', $gallery, true);
 		// var_dump($this->data['events']); die;
-
 		$this->render("visitor/home", 'visitor_master');
 	}
 }

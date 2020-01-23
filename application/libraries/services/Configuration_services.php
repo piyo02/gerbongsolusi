@@ -38,6 +38,10 @@ class Configuration_services
                         'type' => 'text',
                         'label' => "Nama Group",
                     ),
+                    "url" => array(
+                      'type' => 'text',
+                      'label' => "URL",
+                    ),
                     "description" => array(
                         'type' => 'textarea',
                         'label' => "Deskripsi",

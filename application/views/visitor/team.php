@@ -1,76 +1,147 @@
-            <div class="content mt-5 mb-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="text-center">
-                                <h4 class="text-white">Team</h4>
-                                <h6 class="text-secondary" style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quaerat sint, cum optio iure officia alias in eius ducimus hic quidem doloremque corrupti!</h6 style="font-size: 12px;">
-                            </div>
-                        </div>
-                        <div class="row col-12">
-                        </div>
-                    </div>
-                </div>
+  <!-- 
+Start Our Team
+=========================================== -->
+
+<section id="our-team" class="section">
+	<div class="container">
+		<div class="row">
+		
+			<!-- section title -->
+			<div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+				<h2>Team <span class="color">Kami</span></h2>
+				<div class="border"></div>
+			</div>
+			<!-- /section title -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="../images/team/team-1.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Abul Mal Muhit</h4>
+						<span>CEO/Founder</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+				   
+               </div>
             </div>
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12 mb-3">
-                            <div class="card bg-card">
-                                <div class="card-body">
-                                    <p style="font-size: 71px;" class="text-center">
-                                        <span class="text-danger" style="margin-right: -10px;">TE</span>
-                                        <span class="text-white">AM</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="row">
-                                <div class="col-4">
-                                    <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                          <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
-                                                <image xlink:href="<?= base_url('users-assets/') ?>image/1.png" x="-25" width="150" height="100" />
-                                          </pattern>
-                                        </defs>
-                                        <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
-                                    </svg>
-                                </div>
-                                <div class="col-4">
-                                    <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                          <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
-                                                <image xlink:href="<?= base_url('users-assets/') ?>image/1.png" x="-25" width="150" height="100" />
-                                          </pattern>
-                                        </defs>
-                                        <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
-                                    </svg>
-                                </div>
-                                <div class="col-4">
-                                    <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                          <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
-                                                <image xlink:href="<?= base_url('users-assets/') ?>image/1.png" x="-25" width="150" height="100" />
-                                          </pattern>
-                                        </defs>
-                                        <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="../images/team/team-2.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Frank Miller</h4>
+						<span>Manager</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+				</div>
             </div>
-        </div>
-    </div>
-    <!-- <div class="content">
-        <div class="contaier">
-            <footer class="main-footer">
-                <strong>Copyright &copy; 2019 Gerbong Solusi Management</strong>
-                <div class="float-right d-none d-sm-inline-block">
-                  <b>Version</b> 
-                </div>
-            </footer>
-        </div>
-    </div> -->
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="../images/team/team-3.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Michael Jonson</h4>
+						<span>Web Developer</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+               </div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="../images/team/team-4.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Mo. Kha. Alamgir</h4>
+						<span>SEO Specialist</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+               </div>
+            </div>
+			<!-- end team member -->
+			
+		</div>  	<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->

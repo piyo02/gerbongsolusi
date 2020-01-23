@@ -1,130 +1,70 @@
-            <div class="content mb-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 mb-3 row " >
-                            <div class="col-lg-6 col-sm-12 mb-3">
-                                <img src="<?= base_url('users-assets/') ?>image/event-1.jpg" class="card-img-top" alt="...">
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <div class="carousel-item active">
-                                            <img src="<?= base_url('users-assets/') ?>image/event-2.jpg" class="d-block w-100" alt="name">
-                                            <div id='main-slider' class="carousel-caption d-none d-block mr-5">
-                                                <p>Cocok nih buat liburan di akhir pekan. Murah meriah dan pemandangannya juara!</p>
-                                            </div>
-                                        </div>
-                                        <!-- <img src="<?= base_url('users-assets/') ?>image/event-2.jpg" width="18rem" class="card-img-top" alt="..."> -->
-                                    </div>
-                                    <div class="col-6">
-                                        <img src="<?= base_url('users-assets/') ?>image/event-3.jpg" width="18rem" class="card-img-top" alt="...">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img src="<?= base_url('users-assets/') ?>image/event-4.jpg" width="18rem" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="col-6">
-                                        <img src="<?= base_url('users-assets/') ?>image/event-5.png" width="18rem" class="card-img-top" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- Start Services Section
+==================================== -->
 
-                        <div class="row col-12">
-                            <div class="col-lg-9 col-sm-12 mb-5">
-                                <div class="card" style="background-color: rgba(104, 104, 104, 0.8);">
-                                    <div class="card-body">
-                                        <?php foreach( $news as $key => $new ) : ?>
-                                        <div class="row mb-3">
-                                            <div class="col-lg-4 col-sm-12 mb-2">
-                                                <img src="<?= $new->image ?>" alt="" width="100%">
-                                            </div>
-                                            <div class="col-lg-8 col-sm-12">
-                                                <div class="event">
-                                                    <a href="<?= $current_page . 'article/' . $new->file_content ?>"><h5><b><?= $new->title ?></b></h5></a>
-                                                    <div>
-                                                        <span style="font-size: 0.8em;" class="mr-2 text-white">Gerbong Solusi Management</span>
-                                                        <span style="font-size: 0.8em;" class="text-white"><?= date('d M Y', strtotime($new->date)) ?></span>
-                                                    </div>
-                                                    <p><?= $new->preview ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5>Event Terpopuler</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img src="<?= base_url('users-assets/') ?>image/1.png" alt="" width="50px">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="last-event">
-                                                    <a href="#"><h6><b>Judul Event</b></h6></a>
-                                                    <p style="font-size: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                                </div>
-                                            </div>
-                                            <hr class="w-100">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img src="<?= base_url('users-assets/') ?>image/2.png" alt="" width="50px">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="last-event">
-                                                    <a href="#"><h6><b>Judul Event</b></h6></a>
-                                                    <p style="font-size: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                                </div>
-                                            </div>
-                                            <hr class="w-100">
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img src="<?= base_url('users-assets/') ?>image/3.png" alt="" width="50px">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="last-event">
-                                                    <a href="#"><h6><b>Judul Event</b></h6></a>
-                                                    <p style="font-size: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card mt-3">
-                                    <div class="card-body">
-                                        <div class="row justify-content-center">
-                                            <?php foreach ($contacts as $key => $contact) :?>
-                                            <div class="col">
-                                                <a href="<?= $contact->url . '/' . $contact->contact ?>">
-                                                    <img src="<?= $contact->image ?>" alt="<?= $contact->icon_name ?>" width="30rem" class="m-2">
-                                                </a>
-                                            </div>
-                                            <?php endforeach?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="content">
-        <div class="contaier">
-            <footer class="main-footer">
-                <strong>Copyright &copy; 2019 Gerbong Solusi Management</strong>
-                <div class="float-right d-none d-sm-inline-block">
-                  <b>Version</b> 
-                </div>
-            </footer>
-        </div>
-    </div> -->
+<section id="services" class="bg-one">
+	<div class="container mt-20">
+		<div class="row">
+            <!-- Single Service Item -->
+			<article class="col-md-9 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms">
+				<div class="service-block clearfix">
+					<?php foreach ($events as $key => $event) : ?>
+					<!-- single blog post -->
+					<article class="col-12 clearfix wow fadeInUp" data-wow-duration="500ms">
+						<div class="post-block img-rounded">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="media-wrapper">
+									<img src="<?= $event->image ?>" alt="amazing caves coverimage" class="img-responsive" style="padding: 1em;">
+								</div>
+								</div>
+								<div class="col-md-8">
+									<div class="content">
+										<h3><a href="<?= base_url('visitor/news/article/') . $event->file_content ?>"><?= $event->title ?></a></h3>
+										<p><?= $event->preview ?></p>
+									</div>	
+								</div>
+							</div>
+						</div>					
+					</article>
+					<!-- /single blog post -->
+					<?php endforeach; ?>
+				</div>
+			</article>
+            <!-- End Single Service Item -->
+            
+            <!-- Single Service Item -->
+			<article class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+				<div class="service-block clearfix">
+					<div class="title text-center" style="margin-top: -4rem;">
+						<h4>Berita <span class="color">Terpopuler</span></h4>
+						<div class="border"></div>
+					</div>
+					<!-- single blog post -->
+					<article class="col-12 clearfix wow fadeInUp" data-wow-duration="500ms">
+						<div class="post-block img-rounded">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="media-wrapper">
+										<img src="../images/blog/blog-post-1.jpg" alt="amazing caves coverimage" class="img-responsive" style="padding: 0.5em 0 0.5em 0.5em;">
+									</div>
+								</div>
+								<div class="col-md-8">
+									<h6 class="text-justify" style="padding-right: 1em;"><a href="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, vero.</a></h6>
+								</div>
+							</div>
+						</div>					
+					</article>
+					<!-- /single blog post -->
+				</div>
+			</article>
+            <!-- End Single Service Item -->
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+
+<section class="portfolio" id="portfolio">
+	<div class="container">
+		<div class="row portfolio-items-wrapper">
+		</div>
+	</div>	<!-- end container -->
+</section>   <!-- End section -->
