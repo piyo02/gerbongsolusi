@@ -3,26 +3,28 @@
 <section id="contact-us" class="section-bg">
 	<div class="container">
 		<div class="row">
-			
-			<!-- section title -->
 			<div class="title text-center wow fadeIn" data-wow-duration="500ms">
 				<h2>Tertarik? "Let's Take Action With Us!"</h2>
 				<div class="border"></div>
 				<h3>Kontak <span class="color">Kami</span></h3>
 			</div>
-			<!-- /section title -->
 			
-			<!-- Contact Details -->
 			<div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
-				<div style="width: 20%;">
-					<svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-						<defs>
-							<pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
-								<image xlink:href="<?= base_url('users-assets/') ?>images/logo.png" x="10" y="22" width="80" />
-							</pattern>
-						</defs>
-						<polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
-					</svg>
+				<div class="row">
+					<div class="col-md-8 col-sm-8 col-xs-8" style="width: 20%;">
+						<svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+									<image xlink:href="<?= base_url('users-assets/') ?>images/logo.png" x="10" y="22" width="80" />
+								</pattern>
+							</defs>
+							<polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+						</svg>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<h3 class="color">Gerbong Solusi</h3>
+						<h3 id="management">Management</h3>
+					</div>
 				</div>
 				<div class="contact-details mt-3">
 					<div class="con-info clearfix">
@@ -46,9 +48,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- / End Contact Details -->
 				
-			<!-- Contact Form -->
 			<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 				<form id="contact-form" method="post" action="sendmail.php" role="form">
 				
@@ -82,15 +82,12 @@
 					
 				</form>
 			</div>
-			<!-- ./End Contact Form -->
 		
-		</div> <!-- end row -->
-	</div> <!-- end container -->
+		</div>
+	</div>
 	
-	<!-- Google Map -->
-	<div class="google-map">
+	<!-- <div class="google-map">
 		<div id="map-canvas"></div>
-	</div>	
-	<!-- /Google Map -->
+	</div>	 -->
 	
-</section> <!-- end section -->
+</section>

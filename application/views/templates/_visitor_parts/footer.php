@@ -4,7 +4,6 @@
 			    <div class="row wow fadeInUp" data-wow-duration="500ms">
 					<div class="col-lg-12">
 						
-						<!-- Footer Social Links -->
 						<div class="social-icon">
 							<ul class="list-inline">
 								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
@@ -16,19 +15,16 @@
 								<li><a href="#"><i class="tf-ion-social-pinterest-outline"></i></a></li>
 							</ul>
 						</div>
-						<!--/. End Footer Social Links -->
 
-						<!-- copyright -->
 						<div class="copyright text-center">
-							<p>Design And Developed by <a href="http://www.themefisher.com"> Themefisher Team</a>. Copyright &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.
-								<br>Get More <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Templates</a>
+							<p>Developed by Themefisher Team.
+								<br>Technoindo
 							</p>
 						</div>
-						<!-- /copyright -->
-					</div> <!-- end col lg 12 -->
-				</div> <!-- end row -->
-			</div> <!-- end container -->
-		</footer> <!-- end footer -->
+					</div>
+				</div>
+			</div>
+		</footer>
 
 		<div id="scroll-up">
 			up

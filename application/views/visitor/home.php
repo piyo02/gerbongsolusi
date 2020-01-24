@@ -1,4 +1,3 @@
-<?php //var_dump($clients); die; ?>
 <section id="our-team" class="mt-3">
 	<div class="container">
 		<div class="row">
@@ -14,20 +13,17 @@
 						</div>
 						
 						<div class="content">
-							<h3><a href="<?= site_url('visitor/news/article/') . $event->file_content ?>"><?= $event->title ?></a></h3>
+							<h3><a href="<?= $event->file_article ?>"><?= $event->title ?></a></h3>
 							<p><?= $event->preview ?></p>
 							<a class="btn btn-transparent" href="<?= site_url('visitor/news/article/') . $event->file_content ?>">Read more</a>
 						</div>
 					</div>						
 				</article>
 			<?php endforeach; ?>
-		</div>  	<!-- End row -->
-	</div>   	<!-- End container -->
-</section>   <!-- End section -->
+		</div>
+	</div>
+</section>
 
-<!--
-Start Call To Action
-==================================== -->
 <section class="call-to-action carbon overly">
 	<div class="container">
 		<div class="row " >
@@ -47,12 +43,12 @@ Start Call To Action
 			</div>
 			<?php endforeach; ?>
 		</div>
-	</div>   	<!-- End container -->
-</section>   <!-- End section -->
+	</div>
+</section>
 
 <section class="portfolio" id="portfolio">
 	<div class="container">
 		<div class="row portfolio-items-wrapper">
 		</div>
-	</div>	<!-- end container -->
-</section>   <!-- End section -->
+	</div>
+</section>

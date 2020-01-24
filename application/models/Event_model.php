@@ -159,10 +159,14 @@ class Event_model extends MY_Model
   {
     $this->select($this->table . '.*');
     $this->select($this->table . '.image AS image_old');
-    if( $is_news )
+    if( $is_news ){
       $this->select('CONCAT( "'.base_url('uploads/news/photo/').'", image ) AS image');
-    else
+      $this->select('CONCAT( "'.base_url('visitor/news/article/').'", file_content ) AS file_article');
+    }
+    else{
       $this->select('CONCAT( "'.base_url('uploads/event/photo/').'", image ) AS image');
+      $this->select('CONCAT( "'.base_url('visitor/event/article/').'", file_content ) AS file_article');
+    }
     if (isset( $limit ))
       {
         $this->limit( $limit );
@@ -177,10 +181,14 @@ class Event_model extends MY_Model
   {
     $this->select($this->table . '.*');
     $this->select($this->table . '.image AS image_old');
-    if( $is_news )
+    if( $is_news ){
       $this->select('CONCAT( "'.base_url('uploads/news/photo/').'", image ) AS image');
-    else
+      $this->select('CONCAT( "'.base_url('visitor/news/article/').'", file_content ) AS file_article');
+    }
+    else{
       $this->select('CONCAT( "'.base_url('uploads/event/photo/').'", image ) AS image');
+      $this->select('CONCAT( "'.base_url('visitor/event/article/').'", file_content ) AS file_article');
+    }
     if (isset( $limit ))
       {
         $this->limit( $limit );

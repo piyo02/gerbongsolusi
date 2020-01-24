@@ -23,7 +23,7 @@
 								</div>
 								<div class="col-md-8">
 									<div class="content">
-										<h3><a href="<?= base_url('visitor/news/article/') . $event->file_content ?>"><?= $event->title ?></a></h3>
+										<h3><a href="<?= $event->file_article ?>"><?= $event->title ?></a></h3>
 										<p><?= $event->preview ?></p>
 									</div>	
 								</div>
@@ -47,12 +47,12 @@
 					<article class="col-12 clearfix wow fadeInUp" data-wow-duration="500ms">
 						<div class="post-block img-rounded">
 							<div class="row">
-								<div class="col-md-4">
+								<div class="col-md-4 col-sm-4 col-xs-4">
 									<div class="media-wrapper">
-										<img src="../images/blog/blog-post-1.jpg" alt="amazing caves coverimage" class="img-responsive" style="padding: 0.5em 0 0.5em 0.5em;">
+										<img src="<?= base_url('users-assets') ?>/images/blog/blog-post-1.jpg" alt="amazing caves coverimage" class="img-responsive" style="padding: 0.5em 0 0.5em 0.5em;">
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-8 col-sm-8 col-xs-8">
 									<h6 class="text-justify" style="padding-right: 1em;"><a href="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, vero.</a></h6>
 								</div>
 							</div>

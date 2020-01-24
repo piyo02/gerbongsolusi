@@ -20,7 +20,7 @@
 								</div>
 								<div class="col-md-8">
 									<div class="content">
-										<h3><a href="<?= base_url('visitor/news/article/') . $event->file_content ?>"><?= $event->title ?></a></h3>
+										<h3><a href="<?= $event->file_article ?>"><?= $event->title ?></a></h3>
 										<p><?= $event->preview ?></p>
 									</div>	
 								</div>
