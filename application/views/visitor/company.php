@@ -18,10 +18,10 @@
 <section class="section about-2 padding-0 bg-dark" id="about">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-6 padding-0 ">
-				<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/about/about-business-man.jpg" alt="">
+			<div class="col-md-5 padding-0 ">
+				<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/about/img-profile.jpg" alt="" width="100%">
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<div class="content-block">
 					<h2><b><?= $company->name ?></b></h2>
 					<?= $file_content ?>

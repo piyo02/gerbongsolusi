@@ -53,11 +53,11 @@
 				<form id="contact-form" method="post" action="sendmail.php" role="form">
 				
 					<div class="form-group">
-						<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+						<input type="text" placeholder="Nama Lengkap" class="form-control" name="name" id="name">
 					</div>
 					
 					<div class="form-group">
-						<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+						<input type="email" placeholder="Alamat email" class="form-control" name="email" id="email">
 					</div>
 					
 					<div class="form-group">
@@ -65,7 +65,7 @@
 					</div>
 					
 					<div class="form-group">
-						<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>	
+						<textarea rows="6" placeholder="Pesan Kamu..." class="form-control" name="message" id="message"></textarea>	
 					</div>
 					
 					<div id="mail-success" class="success">
