@@ -40,7 +40,6 @@ class News extends Public_Controller {
 		// $data['hit'] = $news->hit + 1;
 		// $data_param['id'] = $news->id;
 		// $this->event_model->update( $data, $data_param )->row();
-		// var_dump( $this->data['comment_list'] ); die;
 		
 		$galleries = $this->gallery_model->galleries_by_event_id( $news->id )->result();
 		
@@ -50,12 +49,13 @@ class News extends Public_Controller {
 		$config['upload_path'] = './'.$upload_path;
 		$file = str_replace( "%20", " ", $article );
 		$file_content = file_get_contents(  $config['upload_path'] . $file );
-
+		
 		$this->data['article'] = $news;
 		$this->data['galleries'] = $galleries;
 		$this->data['file_content'] = $file_content;
 		$this->data['comments'] = $this->comment_model->tree( $news->id );
 		$this->data['comment_list'] = $this->comment_model->get_comment_list(  );
+		// var_dump( $this->data['comments'] ); die;
 		$this->render("visitor/plain_article", 'visitor_master');
 	}
 

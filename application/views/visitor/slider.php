@@ -23,7 +23,7 @@
                     <div class="mask">
                         <ul class="list-inline">
                             <h4 id="text-slider" >
-                                <a href="<?= site_url('visitor/news/article') . $event->file_content ?>">
+                                <a href="<?= site_url('visitor/news/article/') . $event->file_content ?>">
                                     <?= $event->title ?>
                                 </a>
                             </h4>

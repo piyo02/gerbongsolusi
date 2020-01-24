@@ -40,7 +40,7 @@ Start Call To Action
 			<div class="col-md-6 text-center wow fadeInUp" data-wow-duration="500ms" >
 				<div class="block" >							
 					<div class="icon-box">
-						<i class="tf-tools"></i>
+						<i class="tf-ion-ios-glasses"></i>
 					</div>					
 					<div class="content text-center">
 						<h3 class="ddd">Visi</h3>								
@@ -51,7 +51,7 @@ Start Call To Action
 			<div class="col-md-6 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
 				<div class="block">
 					<div class="icon-box">
-						<i class="tf-strategy"></i>
+						<i class="tf-ion-jet"></i>
 					</div>
 					<div class="content text-center">
 						<h3>Misi</h3>

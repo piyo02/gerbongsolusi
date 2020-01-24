@@ -10,7 +10,7 @@
         
         <meta name="author" content="Muhammad Morshed">
 		
-        <title>Meghna | Responsive Multipurpose Parallax HTML5 Template</title>
+        <title><?= APP_NAME ?></title>
 		
 		<!-- Mobile Specific Meta
 		================================================== -->
@@ -22,6 +22,7 @@
 		<!-- CSS
 			================================================== -->
 		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
         <link rel="stylesheet" href="<?= base_url('users-assets/') ?>plugins/themefisher-font/style.css">
 		<!-- bootstrap.min css -->
         <link rel="stylesheet" href="<?= base_url('users-assets/') ?>plugins/bootstrap/dist/css/bootstrap.min.css">
