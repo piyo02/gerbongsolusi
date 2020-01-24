@@ -34,13 +34,14 @@
 <!--
 Start Call To Action
 ==================================== -->
-<section class="call-to-action section-sm bg-1 overly about">
+<section class="call-to-action section-sm carbon overly about">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 text-center wow fadeInUp" data-wow-duration="500ms" >
 				<div class="block" >							
 					<div class="icon-box">
-						<i class="tf-ion-ios-glasses"></i>
+						<img src="<?= base_url('users-assets/') ?>images/logo.png" alt="logo-eo" width="80%" style="margin-top: -2rem;">
+						<!-- <i class="tf-ion-ios-glasses"></i> -->
 					</div>					
 					<div class="content text-center">
 						<h3 class="ddd">Visi</h3>								
@@ -51,7 +52,8 @@ Start Call To Action
 			<div class="col-md-6 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
 				<div class="block">
 					<div class="icon-box">
-						<i class="tf-ion-jet"></i>
+						<img src="<?= base_url('users-assets/') ?>images/logo.png" alt="logo-eo" width="80%" style="margin-top: -2rem;">
+						<!-- <i class="tf-ion-jet"></i> -->
 					</div>
 					<div class="content text-center">
 						<h3>Misi</h3>

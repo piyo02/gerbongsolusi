@@ -25,7 +25,7 @@ class Home extends Public_Controller {
 
 		$limit = 5;
 		$gallery['events'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
-		$data['gallery'] = $this->load->view('visitor/gallery', $gallery, true );
+		// $data['gallery'] = $this->load->view('visitor/gallery', $gallery, true );
 		$data['logo'] = $this->load->view('visitor/logo', null, true );
 		$slider['content_heroArea'] = $this->load->view('visitor/slider', $data, true );
 		$this->data['heroArea'] = $this->load->view('templates/_visitor_parts/hero_area', $slider, true);

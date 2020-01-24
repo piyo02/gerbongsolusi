@@ -22,7 +22,7 @@ class Event extends Public_Controller {
 		// TODO : tampilkan landing page bagi user yang belum daftar
 		$data['events'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
 		$gallery['content_heroArea'] = $this->load->view('visitor/gallery', $data, true );
-		$this->data['heroArea'] = $this->load->view('templates/_visitor_parts/hero_area', $gallery, true);
+		// $this->data['heroArea'] = $this->load->view('templates/_visitor_parts/hero_area', $gallery, true);
 
 		$contacts = $this->contact_model->contacts( 1 )->result();
 

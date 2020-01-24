@@ -7,22 +7,19 @@
 				<div class="border"></div>
 			</div>
 			<?php foreach ($events as $key => $event) : ?>
-				<div class="col-md-4 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
-					<div class="team-member">
-						<div class="member-photo">
-							<img class="img-responsive" src="<?= $event->image ?>" alt="Meghna">
-							<div class="mask">
-								<ul class="list-inline">
-									<h4>
-										<a href="<?= site_url('visitor/news/article/') . $event->file_content ?>">
-											<?= $event->title ?>
-										</a>
-									</h4>
-								</ul>
-							</div>
+				<article class="col-md-4 col-sm-6 col-xs-12 clearfix wow fadeInUp" data-wow-duration="500ms">
+					<div class="post-block">
+						<div class="media-wrapper">
+							<img src="<?= $event->image ?>" alt="amazing caves coverimage" class="img-responsive">
 						</div>
-					</div>
-				</div>
+						
+						<div class="content">
+							<h3><a href="<?= site_url('visitor/news/article/') . $event->file_content ?>"><?= $event->title ?></a></h3>
+							<p><?= $event->preview ?></p>
+							<a class="btn btn-transparent" href="<?= site_url('visitor/news/article/') . $event->file_content ?>">Read more</a>
+						</div>
+					</div>						
+				</article>
 			<?php endforeach; ?>
 		</div>  	<!-- End row -->
 	</div>   	<!-- End container -->
@@ -31,12 +28,12 @@
 <!--
 Start Call To Action
 ==================================== -->
-<section class="call-to-action bg-1 overly">
+<section class="call-to-action carbon overly">
 	<div class="container">
 		<div class="row " >
 			<div class="col-lg-12">
 				<div class="title text-center">
-					<h2>Klien<span class="color"> Kami</span></h2>
+					<h2 style="color: white;">Klien<span class="color"> Kami</span></h2>
 					<div class="border"></div>
 				</div>
 			</div>
@@ -45,7 +42,7 @@ Start Call To Action
 			<?php foreach ($clients as $key => $client) : ?>
 			<div class="item" style="margin: 0 1em;">
 				<div class="">
-					<img src="<?= $client->image ?>" class="img-responsive" alt="<?= $client->name ?>">
+					<img src="<?= $client->image ?>" class="img-responsive" alt="<?= $client->name ?>" style="max-height: 200px !important;">
 				</div>
 			</div>
 			<?php endforeach; ?>
