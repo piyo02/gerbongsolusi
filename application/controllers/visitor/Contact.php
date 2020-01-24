@@ -10,6 +10,7 @@ class Contact extends Public_Controller {
 	public function index()
 	{
 		// TODO : tampilkan landing page bagi user yang belum daftar
+		$this->data['logo'] = $this->load->view('visitor/logo', null, true );
 		$this->render("visitor/contact", 'visitor_master');
 	}
 }

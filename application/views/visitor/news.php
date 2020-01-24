@@ -1,12 +1,13 @@
-<!-- Start Services Section
-==================================== -->
-
 <section id="services" class="bg-one">
 	<div class="container mt-20">
 		<div class="row">
             <!-- Single Service Item -->
 			<article class="col-md-9 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms">
 				<div class="service-block clearfix">
+					<div class="title text-center" style="margin-top: -4rem;">
+						<h2>Ber<span class="color">ita</span></h2>
+						<div class="border"></div>
+					</div>
 					<?php foreach ($events as $key => $event) : ?>
 					<!-- single blog post -->
 					<article class="col-12 clearfix wow fadeInUp" data-wow-duration="500ms">

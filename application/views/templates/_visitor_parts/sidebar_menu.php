@@ -1,26 +1,17 @@
-<!-- 
-  Fixed Navigation
-  ==================================== -->
     <header id="navigation" class="navbar navigation">
         <div class="container">
             <div class="navbar-header">
-              <!-- responsive nav button -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!-- /responsive nav button -->
-    
-                <!-- logo -->
                 <a class="navbar-brand logo" href="#body">
                     <img src="<?= base_url('users-assets/') ?>images/logo.png" alt="Website Logo"/ style="width: 70px !important;">
                 </a>
-            <!-- /logo -->
         </div>
 
-        <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="Navigation">
             <ul id="nav" class="nav navbar-nav navigation-menu">
             <?php
@@ -29,10 +20,8 @@
                     foreach( $datas as $data )
                     {
                         if( ( !$data->status )  ) continue;
-
                         if( !empty( $data->branch )  )
-                        {
-                            ?>
+                        { ?>
                                 <li class="dropdown mr-2">
                                     <a id="<?php echo $data->list_id ?>" class="text-white dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <?php echo $data->name?>
@@ -48,19 +37,15 @@
                                         
                                     </div>
                                 </li>
-                            <?php
-                        }else{
-                            ?>
+                            <?php 
+                        }else { ?>
                                 <li>
                                     <a id="<?php echo $data->list_id ?>" href="<?= site_url( $data->link_visitor ) ?>"><?= $data->name ?></a>
                                 </li>
-                            <?php
-                        }
+                  <?php }
                     }
                 }
-            
-                print_menus( $_menus );
-            ?>
+                print_menus( $_menus ); ?>
             <?php if ($this->session->identity == null) : ?>
                 <li class="nav-item">
                     <a href="<?= base_url('auth/') ?>login" class="btn btn-sm btn-outline-primary nav-link ml-3">Login</a>
@@ -72,29 +57,13 @@
             <?php endif; ?>
             </ul>
         </nav>
-        <!-- /main nav -->
-  
       </div>
   </header>
-  <!--
-  End Fixed Navigation
-  ==================================== -->
 
-        <script type="text/javascript">
-            function menuActive(id) {
-                id = id.trim();
-                // console.log( id );
-                // // console.log(a = document.getElementById(id.trim()));
-                a = document.getElementById(id.trim())
-                // // // var a =document.getElementById("menu").children[num-1].className="active";
-                // // var a = document.getElementById(id.trim());
-                // // console.log(a.parentNode.parentNode);
-                a.classList.add("active");
-                // b = a.parentNode.parentNode.parentNode;
-                // b.classList.add("menu-open");
-                // b.children[0].classList.add("active");
-                // // console.log( b.children[0] );
-                // // document.getElementById(id).classList.add("active");
-
-            }
-        </script>
+<script type="text/javascript">
+    id = '<?= $menu_list_id ?>'
+    id = id.trim()
+    a = document.getElementById(id.trim())
+    // console.log(a);
+    a.classList.add("active");
+</script>

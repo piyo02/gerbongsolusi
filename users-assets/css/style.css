@@ -1232,7 +1232,7 @@ a:focus, a:hover {
 
 .member-photo .mask ul li a {
   border: 1px solid #fff;
-  color: #fff;
+  color: black !important;
   display: block;
   font-size: 20px;
   height: 35px;
@@ -2102,14 +2102,54 @@ blockquote {
 /*=================================================================
 	Custom style
 ==================================================================*/
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mt-2 {
+  margin-top: 2rem !important;
+}
+.mt-3 {
+  margin-top: 3rem !important;
+}
+.mt-4 {
+  margin-top: 4rem !important;
+}
+.mt-5 {
+  margin-top: 5rem !important;
+}
 .member-photo .mask ul h4 a:hover, .member-photo .mask ul h4 a:focus {
   color: black !important;
+  font-weight: bolder;
 }
 .member-photo .mask ul h4 {
   font-size: 1.5rem;
   padding: 0 1rem 0 1rem !important;
 }
+#mask-hero {
+  top: 5rem;
+}
 #text-slider {
   font-size: 2rem;
-  padding: 6rem 6rem 0 6rem !important;
+  padding: 2rem 6rem 0 6rem !important;
+}
+#logo {
+  width: 50%; 
+  margin: 0 auto;
+}
+#management {
+  margin-top: -10px;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .justify-content-center, .info-box .info-box-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }

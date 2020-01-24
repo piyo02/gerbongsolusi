@@ -1,5 +1,5 @@
 <?php //var_dump($clients); die; ?>
-<section id="our-team" class="section">
+<section id="our-team" class="mt-3">
 	<div class="container">
 		<div class="row">
 			<div class="title text-center wow fadeInUp" data-wow-duration="500ms">

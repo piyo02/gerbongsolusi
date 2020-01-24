@@ -39,12 +39,12 @@
 					<?php
 						function print_comment( $datas, $branch = false )
 						{
-							if( $branch ) $style = 'style="margin-left: 3rem !important;"';
+							if( $branch ) $style = 'style="margin-left: 1rem !important;"';
 							else $style = '';
 
 							foreach( $datas as $data ) :
 							 ?>
-						<div class="media" <?= $style ?>>
+						<div class="media" <?= 1 //$style ?>>
 							<div class="row">
 								<div class="col-md-1 col-sm-1 col-xs-1" style="padding: 0 !important;">
 									<img src="<?= base_url('uploads/users_photo/') . $data->image ?>" width="100%" alt="<?= $data->username ?>" style="border-radius: 0.3rem !important; margin-left: 2rem;">

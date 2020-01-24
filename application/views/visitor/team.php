@@ -1,24 +1,15 @@
-  <!-- 
-Start Our Team
-=========================================== -->
-
-<section id="our-team" class="section">
+<section id="our-team" class="mt-3">
 	<div class="container">
 		<div class="row">
-		
-			<!-- section title -->
 			<div class="title text-center wow fadeInUp" data-wow-duration="500ms">
 				<h2>Team <span class="color">Kami</span></h2>
 				<div class="border"></div>
 			</div>
-			<!-- /section title -->
-			
-			<!-- team member -->
 			<div class="col-md-3 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
                <div class="team-member">
 					<div class="member-photo">
 						<!-- member photo -->
-						<img class="img-responsive" src="../images/team/team-1.jpg" alt="Meghna">
+						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-1.jpg" alt="Meghna">
 						<!-- /member photo -->
 						
 						<!-- member social profile -->
@@ -51,7 +42,7 @@ Start Our Team
                <div class="team-member">
 					<div class="member-photo">
 						<!-- member photo -->
-						<img class="img-responsive" src="../images/team/team-2.jpg" alt="Meghna">
+						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-2.jpg" alt="Meghna">
 						<!-- /member photo -->
 						
 						<!-- member social profile -->
@@ -83,7 +74,7 @@ Start Our Team
                <div class="team-member">
 					<div class="member-photo">
 						<!-- member photo -->
-						<img class="img-responsive" src="../images/team/team-3.jpg" alt="Meghna">
+						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-3.jpg" alt="Meghna">
 						<!-- /member photo -->
 						
 						<!-- member social profile -->
@@ -115,7 +106,7 @@ Start Our Team
                <div class="team-member">
 					<div class="member-photo">
 						<!-- member photo -->
-						<img class="img-responsive" src="../images/team/team-4.jpg" alt="Meghna">
+						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-4.jpg" alt="Meghna">
 						<!-- /member photo -->
 						
 						<!-- member social profile -->

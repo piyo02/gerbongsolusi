@@ -2,7 +2,7 @@
 	    <!--
 	    Start Preloader
 	    ==================================== -->
-		<div id="preloader">
+		<!-- <div id="preloader">
 			<div class="preloader">
 				<div class="sk-cube-grid">
 				  <div class="sk-cube sk-cube1"></div>
@@ -16,7 +16,7 @@
 				  <div class="sk-cube sk-cube9"></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
         <!--
         End Preloader
         ==================================== -->

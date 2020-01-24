@@ -14,9 +14,17 @@
 			
 			<!-- Contact Details -->
 			<div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
-				<h3>Contact Details</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
-				<div class="contact-details">
+				<div style="width: 20%;">
+					<svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+								<image xlink:href="<?= base_url('users-assets/') ?>images/logo.png" x="10" y="22" width="80" />
+							</pattern>
+						</defs>
+						<polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+					</svg>
+				</div>
+				<div class="contact-details mt-3">
 					<div class="con-info clearfix">
 						<i class="tf-map-pin"></i>
 						<span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
