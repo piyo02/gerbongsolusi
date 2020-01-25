@@ -1,4 +1,3 @@
-		
 		<footer id="footer" class="bg-one">
 			<div class="container">
 			    <div class="row wow fadeInUp" data-wow-duration="500ms">

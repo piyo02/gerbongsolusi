@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="<?= base_url('users-assets/') ?>plugins/slick-carousel/slick/slick-theme.css">
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="<?= base_url('users-assets/') ?>css/style.css">
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e2bab0c23ecec0012d1409c&product=inline-share-buttons&cms=website' async='async'></script>
 
         <style>
             svg{

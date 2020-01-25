@@ -1,7 +1,7 @@
 <section id="services" class="bg-one about">
 	<div class="container mt-20">
 		<div class="row">
-			<div class="col-md-9 col-sm-9 col-xs-12 wow fadeInUp">
+			<div class="col-md-9 col-sm-12 col-xs-12 wow fadeInUp">
 				<article class="wow fadeInUp" data-wow-duration="500ms">
 					<div class="block" >							
 						<div class="content">
@@ -74,38 +74,32 @@
 				</article>
 			</div>
             
-			<article class="col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
-				<div class="service-block clearfix">
+			<article class="col-md-3 col-sm-12 col-xs-12 wow fadeInUp mt-5" data-wow-duration="500ms" data-wow-delay="200ms">
+				<div class="content">
 					<div class="title text-center" style="margin-top: -4rem;">
-						<h4>Berita <span class="color">Terbaru</span></h4>
+						<h4>Berita <span class="color">Terpopuler</span></h4>
 						<div class="border"></div>
 					</div>
-					<article class="col-12 clearfix wow fadeInUp" data-wow-duration="500ms">
-						<div class="post-block img-rounded">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="media-wrapper">
-										<img src="../images/blog/blog-post-1.jpg" alt="amazing caves coverimage" class="img-responsive" style="padding: 0.5em 0 0.5em 0.5em;">
-									</div>
-								</div>
-								<div class="col-md-8">
-									<h6 class="text-justify" style="padding-right: 1em;"><a href="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, vero.</a></h6>
-								</div>
+					<!-- single blog post -->
+					<?php for ($i=0; $i < 3; $i++) :  ?>
+					<article class="col-md-12 col-sm-4 col-xs-6 clearfix wow fadeInUp" data-wow-duration="500ms">
+						<div class="post-block">
+							<div class="media-wrapper">
+								<img src="http://localhost/gerbongsolusi/uploads/news/photo/NEWS_Kesetaraan_Gender_di_Industri_Film_Perempuan_di_Direksi_BUMN:_Erick_Thohir_hingga_Mira_Lesmana_Berkisah_di_IMS_2020_1579534164.jpg" alt="amazing caves coverimage" class="img-responsive">
 							</div>
-						</div>					
+							
+							<div class="content">
+								<h5><a href="http://localhost/gerbongsolusi/visitor/news/article/NEWS__1579534164.html">Kesetaraan Gender di Industri Film & Perempuan di Direksi BUMN: Erick Thohir hingga Mira Lesmana Berkisah di IMS 2020</a></h5>
+							</div>
+						</div>						
 					</article>
+					<?php endfor; ?>
+					<!-- /single blog post -->
 				</div>
 			</article>
 		</div>
 	</div> 
 </section>
-
-<section class="portfolio" id="portfolio">
-	<div class="container">
-		<div class="row portfolio-items-wrapper">
-		</div>
-	</div>
-</section>  
 
 <?php foreach ($comment_list as $key => $comment) : ?>
 <div class="modal fade" id="comment_<?= $comment->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -134,4 +128,6 @@
   </div>
 </div>
 <?php endforeach; ?>
+<div class="sharethis-inline-share-buttons"></div>
+
 <!-- rgb(115, 127, 138); -->
