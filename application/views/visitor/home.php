@@ -34,11 +34,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="clients" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
+		<div id="clients" class="mb-5 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
 			<?php foreach ($clients as $key => $client) : ?>
-			<div class="item" style="margin: 0 1em;">
+			<div class="item clients" style="margin: 0 1em;">
 				<div class="">
-					<img src="<?= $client->image ?>" class="img-responsive" alt="<?= $client->name ?>" style="max-height: 200px !important;">
+					<img style="max-height:15rem" src="<?= $client->image ?>" class="img-responsive" alt="<?= $client->name ?>" style="max-height: 200px !important;">
 				</div>
 			</div>
 			<?php endforeach; ?>

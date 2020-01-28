@@ -50,14 +50,14 @@
 			</div>
 				
 			<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-				<form id="contact-form" method="post" action="sendmail.php" role="form">
+				<form method="post" action="<?= site_url('visitor/contact/sendEmail') ?>">
 				
 					<div class="form-group">
 						<input type="text" placeholder="Nama Lengkap" class="form-control" name="name" id="name">
 					</div>
 					
 					<div class="form-group">
-						<input type="email" placeholder="Alamat email" class="form-control" name="email" id="email">
+						<input type="text" placeholder="Alamat email" class="form-control" name="email" id="email">
 					</div>
 					
 					<div class="form-group">

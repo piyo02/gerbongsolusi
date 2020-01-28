@@ -10,6 +10,26 @@
 								<div class="border"></div>
 							</div>
 							<?= $file_content ?>
+							<div class="row">
+								<div id="galleries" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
+									<?php foreach ($galleries as $key => $gallery) : ?>
+										<div class="team-member">
+											<div class="member-photo">
+												<img class="img-responsive" src="<?= $gallery->image ?>" alt="Meghna">
+												<div class="mask">
+													<ul class="list-inline" id="mask-hero">
+														<h4 id="text-slider" >
+															<a href="#">
+																<?= $gallery->thumbnail ?>
+															</a>
+														</h4>
+													</ul>
+												</div>
+											</div>
+										</div>
+									<?php endforeach; ?>
+								</div>
+							</div>
 						</div>
 					</div>
 				</article>
@@ -100,7 +120,6 @@
 		</div>
 	</div> 
 </section>
-
 <?php foreach ($comment_list as $key => $comment) : ?>
 <div class="modal fade" id="comment_<?= $comment->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -114,8 +133,8 @@
 		<div class="content">
 			<form method="post" action="" >
 				<div class="form-group">
-					<input type="hidden" class="form-control" name="event_id" id="event_id" value="<?= $article->id ?>">
-					<input type="hidden" class="form-control" name="comment_id" id="comment_id" value="NULL">
+					<input type="hidden" class="form-control" name="event_id" id="event_id" value="<?= $comment->event_id ?>">
+					<input type="hidden" class="form-control" name="comment_id" id="comment_id" value="<?= $comment->comment_id ?>">
 					<input type="text" placeholder="Tulis Komentar..." class="form-control" name="message" id="message">
 				</div>
 		</div>
@@ -131,3 +150,9 @@
 <div class="sharethis-inline-share-buttons"></div>
 
 <!-- rgb(115, 127, 138); -->
+<section class="portfolio" id="portfolio">
+	<div class="container">
+		<div class="row portfolio-items-wrapper">
+		</div>
+	</div>
+</section>

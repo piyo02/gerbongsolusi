@@ -2175,3 +2175,6 @@ blockquote {
             align-items: center;
   }
 }
+.text-black{
+  color: black !important;
+}

@@ -16,8 +16,8 @@
 						</div>
 
 						<div class="copyright text-center">
-							<p>Developed by Themefisher Team.
-								<br>Technoindo
+							<p>Theme Gerbong Solusi Management.
+								<br>.Technoindo.
 							</p>
 						</div>
 					</div>

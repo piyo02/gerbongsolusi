@@ -82,6 +82,13 @@ jQuery(function ($) { "use strict";
   		autoplaySpeed: 4000
 	});
 
+	$("#galleries").slick({
+		infinite: true,
+		arrows:false,
+		autoplay: true,
+  		autoplaySpeed: 4000
+	});
+
 	$("#clients").slick({
 		slidesToShow: 6,
         slidesToScroll: 1,
