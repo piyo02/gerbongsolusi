@@ -38,9 +38,9 @@ class Configuration_services
                         'type' => 'text',
                         'label' => "Nama Group",
                     ),
-                    "url" => array(
+                    "icon" => array(
                       'type' => 'text',
-                      'label' => "URL",
+                      'label' => "Icon",
                     ),
                     "description" => array(
                         'type' => 'textarea',

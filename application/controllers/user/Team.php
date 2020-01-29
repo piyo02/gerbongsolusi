@@ -52,18 +52,18 @@ class Team extends User_Controller {
 		foreach ($positions as $key => $position) {
 			$list_position[$position->id] = $position->name;
 		}
-		$page = ($this->uri->segment(4 + 2)) ? ($this->uri->segment(4 + 2) -  1 ) : 0;
+		$page = ($this->uri->segment(4 + 1)) ? ($this->uri->segment(4 + 1) -  1 ) : 0;
 		// echo $page; return;
         //pagination parameter
-        $pagination['base_url'] = base_url( $this->current_page ) .'/index';
+        $pagination['base_url'] = base_url( $this->current_page ) .'/division' . '/' . $division_id ;
         $pagination['total_records'] = $this->employee_model->record_count() ;
         $pagination['limit_per_page'] = 10;
         $pagination['start_record'] = $page*$pagination['limit_per_page'];
-        $pagination['uri_segment'] = 4 + 2;
+        $pagination['uri_segment'] = 4 + 1;
 		//set pagination
 		if ($pagination['total_records'] > 0 ) $this->data['pagination_links'] = $this->setPagination($pagination);
 		#################################################################3
-		$table = $this->services->get_table_config( $this->current_page );
+		$table = $this->services->get_table_config( $this->current_page , ($pagination['start_record'] + 1));
 		$table[ "rows" ] = $this->employee_model->employees_by_division_id( $pagination['start_record'], $pagination['limit_per_page'], $division_id )->result();
 		$table = $this->load->view('templates/tables/plain_table_image', $table, true);
 		$this->data[ "contents" ] = $table;
@@ -89,10 +89,14 @@ class Team extends User_Controller {
 					'label' => "Divisi",
 					'value' => $division_id,
 				),
-				"position_id" => array(
-					'type' => 'select',
+				// "position_id" => array(
+				// 	'type' => 'select',
+				// 	'label' => "Jabatan",
+				// 	'options' => $list_position,
+				// ),
+				"position" => array(
+					'type' => 'text',
 					'label' => "Jabatan",
-					'options' => $list_position,
 				),
 				"description" => array(
 					'type' => 'textarea',
@@ -134,7 +138,7 @@ class Team extends User_Controller {
         {
 			$data['name'] = $this->input->post( 'name' );
 			$data['division_id'] = $division_id;
-			$data['position_id'] = $this->input->post( 'position_id' );
+			$data['position'] = $this->input->post( 'position' );
 			$data['description'] = $this->input->post( 'description' );
 
 			$data['image'] = $this->upload_image( $division_id );
@@ -165,12 +169,14 @@ class Team extends User_Controller {
         {
 			$data['name'] = $this->input->post( 'name' );
 			$data['division_id'] = $division_id;
-			$data['position_id'] = $this->input->post( 'position_id' );
+			$data['position'] = $this->input->post( 'position' );
 			$data['description'] = $this->input->post( 'description' );
 
 			if($_FILES['image']['name'])
 				$data['image'] = $this->upload_image( $division_id );
-
+		
+			$data_param['id'] 	= $this->input->post('id');
+			
 
 			if( $this->employee_model->update( $data, $data_param  ) ){
 				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::SUCCESS, $this->employee_model->messages() ) );

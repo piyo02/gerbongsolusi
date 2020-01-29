@@ -5,13 +5,9 @@
 						
 						<div class="social-icon">
 							<ul class="list-inline">
-								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-google-outline"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-youtube"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-pinterest-outline"></i></a></li>
+							<?php foreach ($footers as $key => $footer) : ?>
+								<li><a href="<?= $footer->contact ?>"><i class="<?= $footer->icon ?>"></i></a></li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 

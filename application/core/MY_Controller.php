@@ -141,8 +141,10 @@ class Public_Controller extends MY_Controller{
 		parent::__construct();
 		$this->load->model(array(
 			'menu_model',
+			'contact_model',
 		));
 		$this->data[ "_menus" ] = $this->menu_model->tree_visitor( 3 );
+		$this->data['footers'] = $this->contact_model->contacts()->result();
   }
 
   protected function render($the_view = NULL, $template = 'public_master'){

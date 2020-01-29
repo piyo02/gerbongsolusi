@@ -29,22 +29,17 @@
 				<div class="contact-details mt-3">
 					<div class="con-info clearfix">
 						<i class="tf-map-pin"></i>
-						<span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+						<span>JL. H.SUPU YUSUF NO.1 KENDARI</span>
 					</div>
 					
 					<div class="con-info clearfix">
 						<i class="tf-ion-ios-telephone-outline"></i>
-						<span>Phone: +880-31-000-000</span>
-					</div>
-					
-					<div class="con-info clearfix">
-						<i class="tf-ion-iphone"></i>
-						<span>Fax: +880-31-000-000</span>
+						<span>Phone: 0811 4033 666 &nbsp -- &nbsp  0811 407 271</span>
 					</div>
 					
 					<div class="con-info clearfix">
 						<i class="tf-ion-ios-email-outline"></i>
-						<span>Email: hello@meghna.com</span>
+						<span>Email: gerbongsolusimanagementkendari@gmail.com</span>
 					</div>
 				</div>
 			</div>

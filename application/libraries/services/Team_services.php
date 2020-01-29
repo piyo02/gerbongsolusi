@@ -74,16 +74,20 @@ class Team_services
                     ),
                     "name" => array(
                         'type' => 'text',
-                        'label' => "Nama Group",
+                        'label' => "Nama Pegawai",
                     ),
                     "division_id" => array(
                       'type' => 'hidden',
                       'label' => "Divisi",
                     ),
-                    "position_id" => array(
-                      'type' => 'select',
+                    // "position_id" => array(
+                    //   'type' => 'select',
+                    //   'label' => "Jabatan",
+                    //   'options' => $list_position,
+                    // ),
+                    "position" => array(
+                      'type' => 'text',
                       'label' => "Jabatan",
-                      'options' => $list_position,
                     ),
                     "description" => array(
                         'type' => 'textarea',
@@ -145,8 +149,13 @@ class Team_services
           'label' => 'Divisi',
           'rules' =>  'trim|required',
         ),
+        // array(
+        //   'field' => 'position_id',
+        //   'label' => 'Jabatan',
+        //   'rules' =>  'trim|required',
+        // ),
         array(
-          'field' => 'position_id',
+          'field' => 'position',
           'label' => 'Jabatan',
           'rules' =>  'trim|required',
         ),

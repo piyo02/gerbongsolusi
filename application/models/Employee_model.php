@@ -138,13 +138,15 @@ class Employee_model extends MY_Model
       $this->order_by($this->table.'.id', 'asc');
       return $this->fetch_data();
   }
+  
   public function employees_by_division_id( $start = 0 , $limit = NULL, $division_id = NULL)
   {
     $this->select( $this->table . '.*' );
+    $this->select( $this->table . '.position AS position_name' );
     $this->select( 'employee.image AS image_old' );
     $this->select('CONCAT( "'.base_url('uploads/employee/').'", employee.image ) AS image');
     $this->select( 'division.name AS division_name' );
-    $this->select( 'position.name AS position_name' );
+    // $this->select( 'position.name AS position_name' );
     if (isset($division_id))
       {
         $this->where($this->table.'.division_id', $division_id);
@@ -154,11 +156,11 @@ class Employee_model extends MY_Model
         'division.id = employee.division_id',
         'inner'
       );
-      $this->join(
-        'position',
-        'position.id = employee.position_id',
-        'inner'
-      );
+      // $this->join(
+      //   'position',
+      //   'position.id = employee.position_id',
+      //   'inner'
+      // );
       $this->order_by($this->table.'.id', 'desc');
 
       $this->employees( $start, $limit );

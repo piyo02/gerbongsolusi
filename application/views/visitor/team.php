@@ -5,134 +5,61 @@
 				<h2>Team <span class="color">Kami</span></h2>
 				<div class="border"></div>
 			</div>
-			<div class="col-md-3 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
-               <div class="team-member">
-					<div class="member-photo">
-						<!-- member photo -->
-						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-1.jpg" alt="Meghna">
-						<!-- /member photo -->
-						
-						<!-- member social profile -->
-						<div class="mask">
-							<ul class="list-inline">
-								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-							</ul>
+			<!-- CEO -->
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center mb-3">
+				<!-- <div class="col-md-9">
+					<div class="team-member">
+						<div class="member-meta" style="height: 296.667px !important">
+							<h2>TEAM</h2>
 						</div>
-						<!-- /member social profile -->
 					</div>
-					
-					<!-- member name & designation -->
-					<div class="member-meta">
-						<h4>Abul Mal Muhit</h4>
-						<span>CEO/Founder</span>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
-					</div>
-					<!-- /member name & designation -->
-					<!-- /about member -->
-				   
-               </div>
-            </div>
-			<!-- end team member -->
-			
-			<!-- team member -->
-			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
-               <div class="team-member">
-					<div class="member-photo">
-						<!-- member photo -->
-						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-2.jpg" alt="Meghna">
-						<!-- /member photo -->
-						
-						<!-- member social profile -->
-						<div class="mask">
-							<ul class="list-inline">
-								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-							</ul>
+				</div> -->
+				<?php foreach ($teams[0] as $key => $employee) :?>
+				<div class="col-md-3 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
+					<div class="team-member">
+						<div class="member-photo">
+							<img class="img-responsive" src="<?= $employee->image ?>" alt="Meghna">
+							<!-- <div class="mask"></div> -->
 						</div>
-						<!-- /member social profile -->
+						<div class="member-meta">
+							<h4><?= $employee->name ?></h4>
+							<span><?= $employee->position ?></span>
+						</div>
 					</div>
-					
-					<!-- member name & designation -->
-					<div class="member-meta">
-						<h4>Frank Miller</h4>
-						<span>Manager</span>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
-					</div>
-					<!-- /member name & designation -->
-					<!-- /about member -->
 				</div>
-            </div>
-			<!-- end team member -->
+				<?php endforeach; ?>
+			</div>
+			<!-- END CEO -->
 			
-			<!-- team member -->
-			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
-               <div class="team-member">
-					<div class="member-photo">
-						<!-- member photo -->
-						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-3.jpg" alt="Meghna">
-						<!-- /member photo -->
-						
-						<!-- member social profile -->
-						<div class="mask">
-							<ul class="list-inline">
-								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-							</ul>
+			<!-- officer -->
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<?php $i = 1;  foreach ($teams[1] as $key => $employee) :?>
+				<?php if( ($i-1) % 4 == 0 ) : ?>
+					<div class="container">
+						<div class="row">
+				<?php endif; ?>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+					<div class="team-member">
+						<div class="member-photo">
+							<img class="img-responsive" src="<?= $employee->image ?>" alt="Meghna">
+							<!-- <div class="mask"></div> -->
 						</div>
-						<!-- /member social profile -->
-					</div>
-					
-					<!-- member name & designation -->
-					<div class="member-meta">
-						<h4>Michael Jonson</h4>
-						<span>Web Developer</span>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
-					</div>
-					<!-- /member name & designation -->
-					<!-- /about member -->
-               </div>
-            </div>
-			<!-- end team member -->
-			
-			<!-- team member -->
-			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
-               <div class="team-member">
-					<div class="member-photo">
-						<!-- member photo -->
-						<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/team/team-4.jpg" alt="Meghna">
-						<!-- /member photo -->
-						
-						<!-- member social profile -->
-						<div class="mask">
-							<ul class="list-inline">
-								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
-								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-							</ul>
+						<div class="member-meta">
+							<h4><?= $employee->name ?></h4>
+							<span><?= $employee->position ?></span>
 						</div>
-						<!-- /member social profile -->
 					</div>
-					
-					<!-- member name & designation -->
-					<div class="member-meta">
-						<h4>Mo. Kha. Alamgir</h4>
-						<span>SEO Specialist</span>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+				</div>
+				<?php if( ($i) % 4 == 0 ) : ?>
+						</div>
 					</div>
-					<!-- /member name & designation -->
-					<!-- /about member -->
-               </div>
-            </div>
-			<!-- end team member -->
-			
-		</div>  	<!-- End row -->
-	</div>   	<!-- End container -->
-</section>   <!-- End section -->
+				<?php endif; ?>
+				<?php $i++; endforeach; ?>
+			</div>
+			<!-- end officer -->
+		</div>
+	</div>
+</section>
+<!-- 521 -->
+<!-- 478 -->

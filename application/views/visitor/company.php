@@ -15,7 +15,7 @@
 			</div>   	<!-- End container -->
 		</section>   <!-- End section -->
 
-<section class="section about-2 padding-0 bg-dark" id="about">
+<section class="section about-2 padding-0 bg-dark" id="about" style="margin-top: -3.5rem">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-5 padding-0 ">
