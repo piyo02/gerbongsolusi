@@ -21,24 +21,20 @@ class Contact extends Public_Controller {
 	{
 		if(!$_POST) redirect( 'visitor/contact' );
 		
-		$this->load->library('email');
 		$config = array(
 			'protocol'  => 'smtp',
-			'smtp_host' => 'smtp.gmail.com',
+			'smtp_host' => 'ssl://smtp.googlemail.com',
+			'smtp_port' => 465,
 			'smtp_user' => 'vncrms20@gmail.com',
 			'smtp_pass' => '135qet246',
-			'smtp_crypto' => 'tls',
-			'smtp_auth' => TRUE,
-			'send_multipart' => FALSE,
-			'smtp_port' => 587,
 			'mailtype'  => 'html',
-			'wordwrap' => TRUE,
 			'charset'   => 'utf-8',
+			'wordwrap' => TRUE,
 		);
+		$this->load->library('email');
 		$this->email->initialize( $config );
 
 		$this->email->set_newline("\r\n");
-		// var_dump( $config ); die;
 		$name = $this->input->post('name');
 		$email = $this->input->post('email');
 		$subject = $this->input->post('subject');
@@ -47,18 +43,16 @@ class Contact extends Public_Controller {
 		$Companysemail = 'alzidni2000@gmail.com';
 		
 
-		$this->email->from( $email , $name);
-		$this->email->to( $Companysemail );
-		// $this->email->cc('another@another-example.com');
-		// $this->email->bcc('them@their-example.com');
+		$this->email->from($email, $name);
+		$this->email->to($Companysemail);
 
-		$this->email->subject( $subject );
-		$this->email->message( $message );
+		$this->email->subject('test');
+		$this->email->message('hello world');
 
 		if( $this->email->send() ){
 			echo 'true'; die;
 		}else {
-			echo $this->email->print_debugger();
+			show_error($this->email->print_debugger());
 			die;
 		}
 		
