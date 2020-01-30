@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/gerbongsolusi/';
-// $config['base_url'] = 'https://165.22.49.114/var/www/html/gsm/';
+// $config['base_url'] = 'https://gerbongsolusi.com/';
 
 /*
 |--------------------------------------------------------------------------
