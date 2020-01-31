@@ -9,7 +9,6 @@
 								<h4><?= $article->title ?></h4>
 								<div class="border"></div>
 							</div>
-							<?= $file_content ?>
 							<div class="row">
 								<div id="galleries" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
 									<?php foreach ($galleries as $key => $gallery) : ?>
@@ -30,6 +29,7 @@
 									<?php endforeach; ?>
 								</div>
 							</div>
+							<?= $file_content ?>
 						</div>
 					</div>
 				</article>
@@ -51,7 +51,15 @@
 										<input type="hidden" class="form-control" name="comment_id" id="comment_id" value="NULL">
 										<input type="text" placeholder="Tulis Komentar..." class="form-control" name="message" id="message">
 									</div>
-									<button type="submit" class="btn btn-sm btn-primary" disabled>Kirim</button>
+									<?php if( $this->session->userdata('visitor_id') ) :  
+											$display_send = 'block';
+											$display_gsign = 'none';
+										  else :
+											$display_send = 'none';
+											$display_gsign = 'block';
+										  endif; ?>
+									<button type="submit" class="btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
+									<div class="g-signin2" data-onsuccess="onSignIn" style="display: <?= $display_gsign ?>;"></div>
 								</form>
 							</div>
 
@@ -140,7 +148,7 @@
 		</div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="text-black btn btn-primary">Kirim</button>
+        <button type="submit" class="text-black btn btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
 		</form>
       </div>
     </div>
@@ -156,3 +164,28 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	function onSignIn(googleUser) {
+		var profile = googleUser.getBasicProfile();
+		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+		console.log('Name: ' + profile.getName());
+		console.log('Image URL: ' + profile.getImageUrl());
+		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+		$.ajax({
+            type: 'POST', //method
+            url: '<?= base_url('visitor/news/goolesign') ?>', //action
+            data: {
+                usermame: profile.getName(),
+                email: profile.getEmail(),
+                image: profile.getImageUrl()
+            }, //data yang dikrim ke action $_POST['id']
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+                console.log(data);
+            }
+        });
+	}
+
+</script>

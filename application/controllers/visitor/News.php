@@ -14,6 +14,7 @@ class News extends Public_Controller {
 			'contact_model',
 			'comment_model',
 			'category_model',
+			'visitor_model',
 		));
 	}
 	public function index()
@@ -61,7 +62,7 @@ class News extends Public_Controller {
 
 	public function comment(  )
 	{
-		if( !($_POST) ) redirect(site_url(  $this->current_page ));  
+		if( !($_POST) || !$this->session->userdata('visitor_id') ) redirect(site_url(  $this->current_page ));  
 
 		// echo var_dump( $data );return;
 		$article = $this->input->post( 'article' );
@@ -71,7 +72,7 @@ class News extends Public_Controller {
 			// echo 'oke'; die;
 			$data['event_id'] = $this->input->post( 'event_id' );
 			$data['comment_id'] = $this->input->post( 'comment_id' );
-			$data['visitor_id'] = 1;
+			$data['visitor_id'] = $this->session->userdata('visitor_id');
 			$data['message'] = $this->input->post( 'message' );
 			$data['timestamp'] = time();
 
@@ -88,5 +89,21 @@ class News extends Public_Controller {
 		}
 		
 		redirect( site_url($this->current_page) . 'article/' . $article );
+	}
+
+	public function goolesign()
+	{
+		if( !($_POST) ) redirect(site_url(  $this->current_page ));  
+
+		$data = array(
+			'username' => $this->input->post('username'),
+			'email' => $this->input->post('email'),
+			'image' => $this->input->post('image'),
+		);
+
+		$visitor_id = $this->visitor_model->create( $data );
+
+		$session['visitor_id'] = $visitor_id;
+		$this->session->set_userdata( $session );
 	}
 }
