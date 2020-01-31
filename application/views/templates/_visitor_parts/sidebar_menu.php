@@ -48,7 +48,7 @@
                 print_menus( $_menus ); ?>
             <?php if ($this->session->identity == null) : ?>
                 <li class="nav-item">
-                    <a href="<?= base_url('auth/') ?>login" class="btn btn-sm btn-outline-primary nav-link ml-3">Login</a>
+                    <a href="<?= base_url('auth/') ?>login" class="btn btn-sm btn-default nav-link ml-3">Login</a>
                 </li>
             <?php else : ?>
                 <li class="nav-item">
