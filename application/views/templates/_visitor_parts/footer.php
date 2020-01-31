@@ -61,6 +61,6 @@
 		<script type="text/javascript" src="<?= base_url('users-assets/')?>plugins/wow/dist/wow.min.js"></script>
 		<!-- Custom js -->
 		<script type="text/javascript" src="<?= base_url('users-assets/')?>js/script.js"></script>
-		
+		<script src="https://apis.google.com/js/platform.js" async defer></script>		
     </body>
 </html>

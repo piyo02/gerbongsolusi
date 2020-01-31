@@ -9,7 +9,7 @@
         <meta name="description" content="Meghna One page parallax responsive HTML Template ">
         
         <meta name="author" content="Muhammad Morshed">
-		
+		<meta name="google-signin-client_id" content="63926806032-7h9lldiirmvhqglkbnet8phiampbmitp.apps.googleusercontent.com">
         <title><?= APP_NAME ?></title>
 		
 		<!-- Mobile Specific Meta
