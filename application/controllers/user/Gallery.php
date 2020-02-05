@@ -40,7 +40,7 @@ class Gallery extends User_Controller {
 				"thumbnail" => array(
 					'type' => 'text',
 					'label' => "Preview",
-					'value' => "",
+					'value' => "-",
 				),
 			),
 			'data' => NULL

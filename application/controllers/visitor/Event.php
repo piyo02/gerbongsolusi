@@ -18,7 +18,7 @@ class Event extends Public_Controller {
 	}
 	public function index()
 	{
-		$start = 0; $limit = 5; $is_news = 1;
+		$start = 0; $limit = 5; $is_news = 0;
 		// TODO : tampilkan landing page bagi user yang belum daftar
 		$data['events'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
 		$gallery['content_heroArea'] = $this->load->view('visitor/gallery', $data, true );
@@ -26,7 +26,7 @@ class Event extends Public_Controller {
 
 		$contacts = $this->contact_model->contacts( 1 )->result();
 
-		$start = 5; $limit = NULL; $is_news = 1;
+		$start = 0; $limit = NULL; $is_news = 0;
 		$this->data['events'] = $this->event_model->events( $start, $limit, $is_news )->result();
 		$this->data['current_page'] = site_url('visitor/event/');
 		$this->data['contacts'] = $contacts;
@@ -35,7 +35,7 @@ class Event extends Public_Controller {
 	}
 	public function article( $article )
 	{
-		$news = $this->event_model->event_by_file_content( $article, 1 )->row();
+		$news = $this->event_model->event_by_file_content( $article, 0 )->row();
 		
 		// $data['hit'] = $news->hit + 1;
 		// $data_param['id'] = $news->id;
@@ -44,7 +44,7 @@ class Event extends Public_Controller {
 		$galleries = $this->gallery_model->galleries_by_event_id( $news->id )->result();
 		
 		
-		$upload_path = 'uploads/news/';
+		$upload_path = 'uploads/event/';
 		
 		$config['upload_path'] = './'.$upload_path;
 		$file = str_replace( "%20", " ", $article );
