@@ -138,7 +138,7 @@ class Event extends User_Controller {
 	{
 
 		// echo var_dump( $data );return;
-		$this->form_validation->set_rules( $this->services->validation_config );
+		$this->form_validation->set_rules( $this->services->validation_config() );
         if ($this->form_validation->run() === TRUE )
         {
 			$data['category_id'] = $this->input->post( 'category_id' );
