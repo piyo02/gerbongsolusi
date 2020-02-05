@@ -1,14 +1,10 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="description" content="Meghna One page parallax responsive HTML Template ">
+        <meta name="description" content="gerbongsolusi.com">
         
-        <meta name="author" content="Muhammad Morshed">
+        <meta name="author" content="Technoindo">
 		<meta name="google-signin-client_id" content="63926806032-7h9lldiirmvhqglkbnet8phiampbmitp.apps.googleusercontent.com">
         <title><?= APP_NAME ?></title>
 		
