@@ -79,7 +79,7 @@
 	function initMap() {
 		var location = {lat: -3.980060, lng: 122.519240};
 		var map = new google.maps.Map(
-			document.getElementById('map'), {zoom: 10, center: location});
+			document.getElementById('map'), {zoom: 16, center: location});
 		var marker = new google.maps.Marker({position: location, map: map});
 	}
 </script>
