@@ -1,5 +1,9 @@
-<!-- Srart Contact Us
-=========================================== -->		
+<style>
+	#map {
+		height: 400px;  /* The height is 400 pixels */
+		width: 100%;  /* The width is the width of the web page */
+	}
+</style>
 <section id="contact-us" class="section-bg">
 	<div class="container">
 		<div class="row">
@@ -29,7 +33,7 @@
 				<div class="contact-details mt-3">
 					<div class="con-info clearfix">
 						<i class="tf-map-pin"></i>
-						<span>JL. H.SUPU YUSUF NO.1 KENDARI</span>
+						<span>JL. H.SUPU YUSUF NO.1 KENDARI <p style="margin-bottom: -1rem; color: #fff !important;"><a data-toggle="modal" data-target="#mapbox">lihat di map</a></p> </span>
 					</div>
 					
 					<div class="con-info clearfix">
@@ -46,33 +50,20 @@
 				
 			<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 				<form method="post" action="<?= site_url('visitor/contact/sendEmail') ?>">
-				
 					<div class="form-group">
 						<input type="text" placeholder="Nama Lengkap" class="form-control" name="name" id="name">
 					</div>
-					
 					<div class="form-group">
 						<input type="text" placeholder="Alamat email" class="form-control" name="email" id="email">
 					</div>
-					
 					<div class="form-group">
 						<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
 					</div>
-					
 					<div class="form-group">
 						<textarea rows="6" placeholder="Pesan Kamu..." class="form-control" name="message" id="message"></textarea>	
 					</div>
-					
-					<div id="mail-success" class="success">
-						Thank you. The Mailman is on His Way :)
-					</div>
-					
-					<div id="mail-fail" class="error">
-						Sorry, don't know what happened. Try later :(
-					</div>
-					
-					<div id="cf-submit">
-						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+					<div>
+						<input type="submit" class="btn btn-transparent" value="Submit">
 					</div>						
 					
 				</form>
@@ -81,8 +72,28 @@
 		</div>
 	</div>
 	
-	<!-- <div class="google-map">
-		<div id="map-canvas"></div>
-	</div>	 -->
 	
 </section>
+
+<script>
+	function initMap() {
+		var location = {lat: -3.980060, lng: 122.519240};
+		var map = new google.maps.Map(
+			document.getElementById('map'), {zoom: 10, center: location});
+		var marker = new google.maps.Marker({position: location, map: map});
+	}
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnyf3J4nUlG7FP3fkQ-pyAeMExnOdO6ec&callback=initMap">
+</script>
+
+
+<div class="modal fade" id="mapbox" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+				<div id="map"></div>
+			</div>
+        </div>
+    </div>
+</div>
