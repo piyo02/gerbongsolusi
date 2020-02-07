@@ -37,6 +37,10 @@ class News extends Public_Controller {
 	}
 	public function article( $article )
 	{
+		if( $this->session->userdata('visitor_id') !== NULL ){
+			// var_dump($this->session->unset_userdata('visitor_id')); die;
+		}
+
 		$start = 0; $limit = 3; $is_news = 1;
 		$this->data['news'] = $this->event_model->events( $start, $limit, $is_news )->result();
 
@@ -95,9 +99,9 @@ class News extends Public_Controller {
 		redirect( site_url($this->current_page) . 'article/' . $article );
 	}
 
-	public function goolesign()
+	public function google_sign()
 	{
-		if( !($_POST) ) redirect(site_url(  $this->current_page ));  
+		// if( !($_POST) ) redirect(site_url(  $this->current_page ));  
 
 		$data = array(
 			'username' => $this->input->post('username'),
@@ -105,9 +109,21 @@ class News extends Public_Controller {
 			'image' => $this->input->post('image'),
 		);
 
-		$visitor_id = $this->visitor_model->create( $data );
+		$visitor = $this->visitor_model->visitor_by_email( $data['email'] )->row();
+		if( $visitor->id ){
 
-		$session['visitor_id'] = $visitor_id;
+			$session['visitor_id'] = $visitor->id;
+			$session['visitor_name'] = $visitor->username;
+
+		}else {
+
+			$visitor_id = $this->visitor_model->create( $data );
+	
+			$session['visitor_id'] = $visitor_id;
+			$session['visitor_name'] = $data['username'];
+
+		}
 		$this->session->set_userdata( $session );
+		echo json_encode(1);
 	}
 }
