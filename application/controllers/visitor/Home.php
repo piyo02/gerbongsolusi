@@ -17,7 +17,7 @@ class Home extends Public_Controller {
 	{
 		$start = 0;
 		$limit = 3;
-		$is_news = 1;
+		$is_news = 0;
 		$this->data['events'] = $this->event_model->events( $start, $limit, $is_news )->result();
 		
 		// $this->data['clients'] = array();
