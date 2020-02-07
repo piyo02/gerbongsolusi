@@ -109,19 +109,19 @@
 						<div class="border"></div>
 					</div>
 					<!-- single blog post -->
-					<?php for ($i=0; $i < 3; $i++) :  ?>
+					<?php foreach ($news as $key => $new) : ?>
 					<article class="col-md-12 col-sm-4 col-xs-6 clearfix wow fadeInUp" data-wow-duration="500ms">
 						<div class="post-block">
 							<div class="media-wrapper">
-								<img src="http://localhost/gerbongsolusi/uploads/news/photo/NEWS_Kesetaraan_Gender_di_Industri_Film_Perempuan_di_Direksi_BUMN:_Erick_Thohir_hingga_Mira_Lesmana_Berkisah_di_IMS_2020_1579534164.jpg" alt="amazing caves coverimage" class="img-responsive">
+								<img src="<?= $new->image ?>" alt="amazing caves coverimage" class="img-responsive">
 							</div>
 							
 							<div class="content">
-								<h5><a href="http://localhost/gerbongsolusi/visitor/news/article/NEWS__1579534164.html">Kesetaraan Gender di Industri Film & Perempuan di Direksi BUMN: Erick Thohir hingga Mira Lesmana Berkisah di IMS 2020</a></h5>
+								<h5><a href="<?= $new->file_article ?>"><?= $new->title ?></a></h5>
 							</div>
 						</div>						
 					</article>
-					<?php endfor; ?>
+					<?php endforeach; ?>
 					<!-- /single blog post -->
 				</div>
 			</article>
