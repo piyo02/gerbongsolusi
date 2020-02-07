@@ -41,6 +41,7 @@
 						<div class="border"></div>
 					</div>
 					<!-- single blog post -->
+					<?php foreach ($popular_event as $key => $event) : ?>
 					<article class="col-md-12 col-sm-4 col-xs-6 clearfix wow fadeInUp" data-wow-duration="500ms">
 						<div class="post-block">
 							<div class="media-wrapper">
@@ -52,28 +53,7 @@
 							</div>
 						</div>						
 					</article>
-					<article class="col-md-12 col-sm-4 col-xs-6 clearfix wow fadeInUp" data-wow-duration="500ms">
-						<div class="post-block">
-							<div class="media-wrapper">
-								<img src="<?= $event->image ?>" alt="amazing caves coverimage" class="img-responsive">
-							</div>
-							
-							<div class="content">
-								<h5><a href="<?= $event->file_article ?>"><?= $event->title ?></a></h5>
-							</div>
-						</div>						
-					</article>
-					<article class="col-md-12 col-sm-4 col-xs-6 clearfix wow fadeInUp" data-wow-duration="500ms">
-						<div class="post-block">
-							<div class="media-wrapper">
-								<img src="<?= $event->image ?>" alt="amazing caves coverimage" class="img-responsive">
-							</div>
-							
-							<div class="content">
-								<h5><a href="<?= $event->file_article ?>"><?= $event->title ?></a></h5>
-							</div>
-						</div>						
-					</article>
+					<?php endforeach; ?>
 					<!-- /single blog post -->
 				</div>
 			</article>

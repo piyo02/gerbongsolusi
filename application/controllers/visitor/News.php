@@ -19,7 +19,8 @@ class News extends Public_Controller {
 	}
 	public function index()
 	{
-		$start = 0; $limit = 5; $is_news = 1;
+		$start = 0; $limit = 3; $is_news = 1;
+		$this->data['popular_event'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
 		// TODO : tampilkan landing page bagi user yang belum daftar
 		$data['events'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
 		$gallery['content_heroArea'] = $this->load->view('visitor/gallery', $data, true );
@@ -27,7 +28,7 @@ class News extends Public_Controller {
 
 		$contacts = $this->contact_model->contacts( 1 )->result();
 
-		$start = 5; $limit = NULL; $is_news = 1;
+		$start = 0; $limit = NULL; $is_news = 1;
 		$this->data['news'] = $this->event_model->events( $start, $limit, $is_news )->result();
 		$this->data['current_page'] = site_url('visitor/news/');
 		$this->data['contacts'] = $contacts;
@@ -36,6 +37,9 @@ class News extends Public_Controller {
 	}
 	public function article( $article )
 	{
+		$start = 0; $limit = 3; $is_news = 1;
+		$this->data['news'] = $this->event_model->events( $start, $limit, $is_news )->result();
+
 		$news = $this->event_model->event_by_file_content( $article, 1 )->row();
 		
 		// $data['hit'] = $news->hit + 1;

@@ -18,11 +18,9 @@ class Event extends Public_Controller {
 	}
 	public function index()
 	{
-		$start = 0; $limit = 5; $is_news = 0;
-		// TODO : tampilkan landing page bagi user yang belum daftar
-		$data['events'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
-		$gallery['content_heroArea'] = $this->load->view('visitor/gallery', $data, true );
-		// $this->data['heroArea'] = $this->load->view('templates/_visitor_parts/hero_area', $gallery, true);
+		$start = 0; $limit = 3; $is_news = 0;
+		$this->data['popular_event'] = $this->event_model->events_most_popular( $start, $limit, $is_news )->result();
+		// var_dump($this->data['popular_event']); die;
 
 		$contacts = $this->contact_model->contacts( 1 )->result();
 
@@ -30,16 +28,17 @@ class Event extends Public_Controller {
 		$this->data['events'] = $this->event_model->events( $start, $limit, $is_news )->result();
 		$this->data['current_page'] = site_url('visitor/event/');
 		$this->data['contacts'] = $contacts;
-		// var_dump($this->data['news']); die;
 		$this->render("visitor/event", 'visitor_master');
 	}
 	public function article( $article )
 	{
+		$start = 0; $limit = 3; $is_news = 0;
+		$this->data['news'] = $this->event_model->events( $start, $limit, $is_news )->result();
 		$news = $this->event_model->event_by_file_content( $article, 0 )->row();
 		
-		// $data['hit'] = $news->hit + 1;
-		// $data_param['id'] = $news->id;
-		// $this->event_model->update( $data, $data_param )->row();
+		$data['hit'] = $news->hit + 1;
+		$data_param['id'] = $news->id;
+		$this->event_model->update( $data, $data_param )->row();
 		
 		$galleries = $this->gallery_model->galleries_by_event_id( $news->id )->result();
 		
