@@ -111,6 +111,20 @@ class Visitor_model extends MY_Model
 
       return $this;
   }
+  public function visitor_by_email( $email = NULL  )
+  {
+      if (isset($email))
+      {
+        $this->where($this->table.'.email', $email);
+      }
+
+      $this->limit(1);
+      $this->order_by($this->table.'.id', 'desc');
+
+      $this->visitors(  );
+
+      return $this;
+  }
   // /**
   //  * visitors
   //  *
@@ -129,8 +143,6 @@ class Visitor_model extends MY_Model
   public function visitors( $start = 0 , $limit = NULL )
   {
     $this->select( $this->table . '.*' );
-    $this->select( $this->table . '.file AS image_old' );
-    $this->select('CONCAT( "'.base_url('uploads/icon/').'", file ) AS image');
       if (isset( $limit ))
       {
         $this->limit( $limit );

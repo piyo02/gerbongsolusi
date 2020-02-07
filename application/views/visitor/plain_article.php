@@ -58,8 +58,8 @@
 											$display_send = 'none';
 											$display_gsign = 'block';
 										  endif; ?>
-									<button type="submit" class="btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
-									<div class="g-signin2" data-onsuccess="onSignIn" style="display: <?= $display_gsign ?>;"></div>
+									<button type="submit" id="btn-comment" class="btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
+									<div class="g-signin2" data-onsuccess="onSignIn" id="btn-onSignIn" style="display: <?= $display_gsign ?>;"></div>
 								</form>
 							</div>
 
@@ -168,22 +168,33 @@
 <script>
 	function onSignIn(googleUser) {
 		var profile = googleUser.getBasicProfile();
+
+		var v_username = profile.getName();
+		var v_email = profile.getImageUrl();
+		var v_image = profile.getEmail();
+
 		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 		console.log('Name: ' + profile.getName());
 		console.log('Image URL: ' + profile.getImageUrl());
 		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
 		$.ajax({
             type: 'POST', //method
-            url: '<?= base_url('visitor/news/goolesign') ?>', //action
+            url: '<?= base_url('visitor/news/google_sign') ?>', //action
             data: {
-                usermame: profile.getName(),
-                email: profile.getEmail(),
-                image: profile.getImageUrl()
+                username: v_username,
+                email: v_email,
+                image: v_image
             }, //data yang dikrim ke action $_POST['id']
             dataType: 'json',
             async: false,
             success: function(data) {
-                console.log(data);
+				var btn_comment = document.getElementById('btn-comment');
+				btn_comment.setAttribute('style', 'display: block');
+				var btn_onSignIn = document.getElementById('btn-onSignIn');
+				btn_onSignIn.setAttribute('style', 'display: none');
+                console.log(btn_comment);
+                console.log(btn_onSignIn);
             }
         });
 	}
