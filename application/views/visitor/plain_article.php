@@ -150,7 +150,7 @@
       <div class="modal-footer">
 
 				<div class="g-signin2 btn-onSignIn" data-onsuccess="onSignIn" style="display: <?= $display_gsign ?>;"></div>
-				<button type="submit" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
+				<button type="submit" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>; color: black !important;">Kirim</button>
 			</form>
       </div>
     </div>
