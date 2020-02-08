@@ -11,6 +11,7 @@ class Home extends Public_Controller {
 			'event_model',
 			'category_model',
 			'client_model',
+			'visitor_model',
 		));
 	}
 	public function index()
