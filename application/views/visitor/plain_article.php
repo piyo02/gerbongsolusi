@@ -148,7 +148,7 @@
 		</div>
       </div>
       <div class="modal-footer">
-				<button type="submit" id="btn-comment" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>; color: black !important;">Kirim</button>
+				<button type="submit" id="btn-comment" class="btn-comment btn btn-sm btn-primary" style="color: black !important; display: <?= $display_send ?>;">Kirim</button>
 				<div class="g-signin2 btn-onSignIn" data-onsuccess="onSignIn" id="btn-onSignIn" style="display: <?= $display_gsign ?>;"></div>
 			</form>
       </div>
