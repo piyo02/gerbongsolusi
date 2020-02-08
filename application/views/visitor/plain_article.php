@@ -200,7 +200,8 @@
 				for (let index = 0; index < btn_comments.length; index++) {
 					const btn_comment = btn_comments[index];
 					const btn_onSignIn = btn_onSignIns[index];
-					btn_comment.setAttribute('style', 'display: block');
+					// btn_comment.setAttribute('style', 'display: block');
+					btn_comment.style.display = 'block';
 					btn_onSignIn.setAttribute('style', 'display: none');
 				}
             }
