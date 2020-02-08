@@ -75,7 +75,7 @@
 						<div class="media" <?= 1 //$style ?>>
 							<div class="row">
 								<div class="col-md-1 col-sm-1 col-xs-1" style="padding: 0 !important;">
-									<img src="<?= base_url('uploads/users_photo/') . $data->image ?>" width="100%" alt="<?= $data->username ?>" style="border-radius: 0.3rem !important; margin-left: 2rem;">
+									<img src="<?= $data->image ?>" width="100%" alt="<?= $data->username ?>" style="border-radius: 0.3rem !important; margin-left: 2rem;">
 								</div>
 								<div class="col-md-10 col-sm-10 col-xs-10" style="margin-left: 2rem;">
 									<div class="media-body">
