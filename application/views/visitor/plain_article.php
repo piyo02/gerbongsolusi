@@ -148,7 +148,7 @@
 		</div>
       </div>
       <div class="modal-footer">
-				<button type="submit" id="btn-comment" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
+				<button type="submit" id="btn-comment" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>; color: black !important;">Kirim</button>
 				<div class="g-signin2 btn-onSignIn" data-onsuccess="onSignIn" id="btn-onSignIn" style="display: <?= $display_gsign ?>;"></div>
 			</form>
       </div>
@@ -190,12 +190,18 @@
             dataType: 'json',
             async: false,
             success: function(data) {
-				var btn_comment = document.getElementsByClass('btn-comment');
-				btn_comment.setAttribute('style', 'display: block');
-				var btn_onSignIn = document.getElementsByClass('btn-onSignIn');
-				btn_onSignIn.setAttribute('style', 'display: none');
-                console.log(btn_comment);
-                console.log(btn_onSignIn);
+				var btn_comments = document.getElementsByClassName('btn-comment');
+				var btn_onSignIns = document.getElementsByClassName('btn-onSignIn');
+
+				console.log(btn_comments.length);
+				console.log(btn_onSignIns.length);
+				
+				for (let index = 0; index < btn_comments.length; index++) {
+					const btn_comment = btn_comments[index];
+					const btn_onSignIn = btn_onSignIns[index];
+					btn_comment.setAttribute('style', 'display: block');
+					btn_onSignIn.setAttribute('style', 'display: none');
+				}
             }
         });
 	}
