@@ -125,6 +125,20 @@ class Visitor_model extends MY_Model
 
       return $this;
   }
+  public function visitor_by_ip_address( $ip_address = NULL  )
+  {
+      if (isset($ip_address))
+      {
+        $this->where($this->table.'.ip_address', $ip_address);
+      }
+
+      $this->limit(1);
+      $this->order_by($this->table.'.id', 'desc');
+
+      $this->visitors(  );
+
+      return $this;
+  }
   // /**
   //  * visitors
   //  *

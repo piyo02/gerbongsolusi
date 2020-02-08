@@ -171,8 +171,8 @@
 		var profile = googleUser.getBasicProfile();
 
 		var v_username = profile.getName();
-		var v_email = profile.getImageUrl();
-		var v_image = profile.getEmail();
+		var v_image = profile.getImageUrl();
+		var v_email = profile.getEmail();
 
 		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 		console.log('Name: ' + profile.getName());

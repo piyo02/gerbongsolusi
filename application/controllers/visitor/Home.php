@@ -15,8 +15,18 @@ class Home extends Public_Controller {
 	}
 	public function index()
 	{
-		
-		var_dump($this->input->ip_address()); die;
+		$ip_address = $this->input->ip_address();
+		$visitor = $this->visitor_model->visitor_by_ip_address( $ip_address )->row();
+
+		if( $visitor->id ){
+			$session['visitor_id'] = $visitor->id;
+			$session['visitor_name'] = $visitor->username;
+			$session['visitor_image'] = $visitor->image;
+
+			$this->session->set_userdata( $session );
+		}
+
+		// var_dump( $this->input->ip_address() ); die;
 		$start = 0;
 		$limit = 3;
 		$is_news = 0;

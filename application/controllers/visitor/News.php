@@ -107,6 +107,7 @@ class News extends Public_Controller {
 			'username' => $this->input->post('username'),
 			'email' => $this->input->post('email'),
 			'image' => $this->input->post('image'),
+			'ip_address' => $this->input->ip_address(),
 		);
 
 		$visitor = $this->visitor_model->visitor_by_email( $data['email'] )->row();
@@ -114,6 +115,7 @@ class News extends Public_Controller {
 
 			$session['visitor_id'] = $visitor->id;
 			$session['visitor_name'] = $visitor->username;
+			$session['visitor_image'] = $visitor->image;
 
 		}else {
 
@@ -121,6 +123,7 @@ class News extends Public_Controller {
 	
 			$session['visitor_id'] = $visitor_id;
 			$session['visitor_name'] = $data['username'];
+			$session['visitor_image'] = $visitor->image;
 
 		}
 		$this->session->set_userdata( $session );
