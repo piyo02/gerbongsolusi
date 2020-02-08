@@ -46,9 +46,9 @@ class News extends Public_Controller {
 
 		$news = $this->event_model->event_by_file_content( $article, 1 )->row();
 		
-		// $data['hit'] = $news->hit + 1;
-		// $data_param['id'] = $news->id;
-		// $this->event_model->update( $data, $data_param )->row();
+		$data['hit'] = $news->hit + 1;
+		$data_param['id'] = $news->id;
+		$this->event_model->update( $data, $data_param );
 		
 		$galleries = $this->gallery_model->galleries_by_event_id( $news->id )->result();
 		
