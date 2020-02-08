@@ -19,7 +19,7 @@ class Home extends Public_Controller {
 		$ip_address = $this->input->ip_address();
 		$visitor = $this->visitor_model->visitor_by_ip_address( $ip_address )->row();
 
-		if( $visitor->id ){
+		if( isset( $visitor->id ) ){
 			$session['visitor_id'] = $visitor->id;
 			$session['visitor_name'] = $visitor->username;
 			$session['visitor_image'] = $visitor->image;

@@ -111,7 +111,7 @@ class News extends Public_Controller {
 		);
 
 		$visitor = $this->visitor_model->visitor_by_email( $data['email'] )->row();
-		if( $visitor->id ){
+		if( isset( $visitor->id ) ){
 
 			$session['visitor_id'] = $visitor->id;
 			$session['visitor_name'] = $visitor->username;
