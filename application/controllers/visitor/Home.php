@@ -15,6 +15,7 @@ class Home extends Public_Controller {
 	}
 	public function index()
 	{
+		var_dump($this->input->ip_address()); die;
 		$start = 0;
 		$limit = 3;
 		$is_news = 0;
