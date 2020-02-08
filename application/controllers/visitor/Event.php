@@ -38,7 +38,7 @@ class Event extends Public_Controller {
 		
 		$data['hit'] = $news->hit + 1;
 		$data_param['id'] = $news->id;
-		$this->event_model->update( $data, $data_param )->row();
+		$this->event_model->update( $data, $data_param );
 		
 		$galleries = $this->gallery_model->galleries_by_event_id( $news->id )->result();
 		

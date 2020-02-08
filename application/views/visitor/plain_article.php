@@ -58,8 +58,8 @@
 											$display_send = 'none';
 											$display_gsign = 'block';
 										  endif; ?>
-									<button type="submit" id="btn-comment" class="btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
-									<div class="g-signin2" data-onsuccess="onSignIn" id="btn-onSignIn" style="display: <?= $display_gsign ?>;"></div>
+									<button type="submit" id="btn-comment" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
+									<div class="g-signin2 btn-onSignIn" data-onsuccess="onSignIn" id="btn-onSignIn" style="display: <?= $display_gsign ?>;"></div>
 								</form>
 							</div>
 
@@ -148,8 +148,9 @@
 		</div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="text-black btn btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
-		</form>
+				<button type="submit" id="btn-comment" class="btn-comment btn btn-sm btn-primary" style="display: <?= $display_send ?>;">Kirim</button>
+				<div class="g-signin2 btn-onSignIn" data-onsuccess="onSignIn" id="btn-onSignIn" style="display: <?= $display_gsign ?>;"></div>
+			</form>
       </div>
     </div>
   </div>
@@ -189,9 +190,9 @@
             dataType: 'json',
             async: false,
             success: function(data) {
-				var btn_comment = document.getElementById('btn-comment');
+				var btn_comment = document.getElementsByClass('btn-comment');
 				btn_comment.setAttribute('style', 'display: block');
-				var btn_onSignIn = document.getElementById('btn-onSignIn');
+				var btn_onSignIn = document.getElementsByClass('btn-onSignIn');
 				btn_onSignIn.setAttribute('style', 'display: none');
                 console.log(btn_comment);
                 console.log(btn_onSignIn);
