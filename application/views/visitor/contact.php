@@ -77,7 +77,7 @@
 
 <script>
 	function initMap() {
-		var location = {lat: -3.980060, lng: 122.519240};
+		var location = {lat: -3.981716, lng: 122.518213};
 		var map = new google.maps.Map(
 			document.getElementById('map'), {zoom: 16, center: location});
 		var marker = new google.maps.Marker({position: location, map: map});
