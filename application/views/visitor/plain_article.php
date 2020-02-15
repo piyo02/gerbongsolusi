@@ -1,8 +1,8 @@
 <section id="services" class="bg-one about">
 	<div class="container mt-20">
 		<div class="row">
-			<div class="col-md-9 col-sm-12 col-xs-12 wow fadeInUp">
-				<article class="wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<article class="" >
 					<div class="block" >							
 						<div class="content">
 							<div class="text-center" style="margin-bottom: 2rem">
@@ -103,7 +103,7 @@
 				</article>
 			</div>
             
-			<article class="col-md-3 col-sm-12 col-xs-12 wow fadeInUp mt-5" data-wow-duration="500ms" data-wow-delay="200ms">
+			<article class="col-md-3 col-sm-12 col-xs-12 mt-5" data-wow-delay="200ms">
 				<div class="content">
 					<div class="title text-center" style="margin-top: -4rem;">
 						<h4>Berita <span class="color">Terpopuler</span></h4>
