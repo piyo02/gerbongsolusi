@@ -209,3 +209,8 @@
 	}
 
 </script>
+<?php if( $alert ): ?>
+<script>
+	alert("<?= $alert ?>")
+</script>
+<?php endif; ?>

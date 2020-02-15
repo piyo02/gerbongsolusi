@@ -40,7 +40,7 @@ class Contact extends Public_Controller {
 		$subject = $this->input->post('subject');
 		$message = $this->input->post('message');
 		
-		$Companysemail = 'alzidni2000@gmail.com';
+		$Companysemail = 'gerbongsolusimanagementkendari@gmail.com';
 		
 
 		$this->email->from($email, $name);
