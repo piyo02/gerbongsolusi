@@ -45,9 +45,10 @@
 							<!-- form komentar -->
 
 							<div class="content">
-								<form method="post" action="" >
+								<form method="post" action="<?= $current_page . 'comment/' ?>" >
 									<div class="form-group">
 										<input type="hidden" class="form-control" name="event_id" id="event_id" value="<?= $article->id ?>">
+										<input type="hidden" class="form-control" name="article" id="article" value="<?= $article->file_content ?>">
 										<input type="hidden" class="form-control" name="comment_id" id="comment_id" value="NULL">
 										<input type="text" placeholder="Tulis Komentar..." class="form-control" name="message" id="message">
 									</div>
@@ -139,10 +140,11 @@
       </div>
       <div class="modal-body">
 		<div class="content">
-			<form method="post" action="" >
+			<form method="post" action="<?= $current_page . 'comment/' ?>" >
 				<div class="form-group">
 					<input type="hidden" class="form-control" name="event_id" id="event_id" value="<?= $comment->event_id ?>">
-					<input type="hidden" class="form-control" name="comment_id" id="comment_id" value="<?= $comment->comment_id ?>">
+					<input type="hidden" class="form-control" name="article" id="article" value="<?= $article->file_content ?>">
+					<input type="hidden" class="form-control" name="comment_id" id="comment_id" value="<?= $comment->id ?>">
 					<input type="text" placeholder="Tulis Komentar..." class="form-control" name="message" id="message">
 				</div>
 		</div>
@@ -209,8 +211,8 @@
 	}
 
 </script>
-<?php if( $alert ): ?>
+<?php if( isset( $alert ) ): ?>
 <script>
-	alert("<?= $alert ?>")
+	alert("Komentar Berhasil ditambahkan");
 </script>
 <?php endif; ?>

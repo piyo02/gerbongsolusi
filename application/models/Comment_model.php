@@ -58,7 +58,7 @@ class Comment_model extends MY_Model
 
     $this->db->trans_commit();
 
-    $this->set_message("berhasil");
+    $this->set_message("Komentar telah di tambahkan");
     return TRUE;
   }
   /**

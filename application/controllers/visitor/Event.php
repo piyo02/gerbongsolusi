@@ -49,11 +49,13 @@ class Event extends Public_Controller {
 		$file = str_replace( "%20", " ", $article );
 		$file_content = file_get_contents(  $config['upload_path'] . $file );
 		
+		$alert = $this->session->flashdata('alert');
 		$this->data['article'] = $news;
 		$this->data['galleries'] = $galleries;
 		$this->data['file_content'] = $file_content;
 		$this->data['comments'] = $this->comment_model->tree( $news->id );
 		$this->data["alert"] = (isset($alert)) ? $alert : NULL ;
+		$this->data['current_page'] = site_url('visitor/news/');
 		$this->data['comment_list'] = $this->comment_model->get_comment_list(  );
 		// var_dump( $this->data['comments'] ); die;
 		$this->render("visitor/plain_article", 'visitor_master');
