@@ -5,7 +5,9 @@
 						
 						<div class="social-icon">
 							<ul class="list-inline">
-							<?php foreach ($footers as $key => $footer) : ?>
+							<?php foreach ($footers as $key => $footer) :
+									if( $footer->icon_name == "website" ) continue;
+								?>
 								<li><a href="<?= $footer->contact ?>"><i class="<?= $footer->icon ?>"></i></a></li>
 								<?php endforeach; ?>
 							</ul>

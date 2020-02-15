@@ -33,7 +33,7 @@
 				<div class="contact-details mt-3">
 					<div class="con-info clearfix">
 						<i class="tf-map-pin"></i>
-						<span>JL. H.SUPU YUSUF NO.1 KENDARI <p style="margin-bottom: -1rem; color: #fff !important;"><a data-toggle="modal" data-target="#mapbox">lihat di map</a></p> </span>
+						<span>JL. H.SUPU YUSUF NO.1 KENDARI <p style="margin-bottom: -1rem; color: #fff !important;"><a data-toggle="modal" data-target="#mapbox"><b>Lihat di map</b></a></p> </span>
 					</div>
 					
 					<div class="con-info clearfix">
@@ -79,7 +79,7 @@
 	function initMap() {
 		var location = {lat: -3.981716, lng: 122.518213};
 		var map = new google.maps.Map(
-			document.getElementById('map'), {zoom: 16, center: location});
+			document.getElementById('map'), {zoom: 20, center: location});
 		var marker = new google.maps.Marker({position: location, map: map});
 	}
 </script>
