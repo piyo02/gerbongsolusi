@@ -45,6 +45,11 @@ class News extends Public_Controller {
 		$this->data['news'] = $this->event_model->events( $start, $limit, $is_news )->result();
 
 		$news = $this->event_model->event_by_file_content( $article, 1 )->row();
+
+		if( !$news ){
+          $this->session->set_flashdata('alert', $this->alert->set_alert( Alert::DANGER, 'Artikel Tidak ditemukan!' ));
+		  redirect( site_url($this->current_page) );
+		} 
 		
 		$data['hit'] = $news->hit + 1;
 		$data_param['id'] = $news->id;
