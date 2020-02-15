@@ -42,14 +42,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><?= $division ?></h3>
+                <h3><?= $news ?></h3>
 
-                <p>Divisi</p>
+                <p>Berita</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="<?= site_url('user/division')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= site_url('user/news')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
