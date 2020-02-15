@@ -82,6 +82,8 @@ class Event extends Public_Controller {
 			$data['message'] = $this->input->post( 'message' );
 			$data['timestamp'] = time();
 
+			if( $data['comment_id'] == 0 ) $data['comment_id'] = NULL;
+
 			if( $this->comment_model->create( $data ) ){
 				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::SUCCESS, $this->comment_model->messages() ) );
 			}else{
