@@ -1593,7 +1593,7 @@ a:focus, a:hover {
   Footer section
 ==================================================================*/
 .social-icon {
-  padding: 60px 0 35px;
+  padding: 1rem;
 }
 
 .social-icon ul {
@@ -1656,8 +1656,17 @@ a:focus, a:hover {
   }
 }
 
+@media (max-width: 1199.98px) {
+  .copyright {
+    padding: 0 !important;
+  }
+}
+
 .copyright {
-  padding: 20px 0;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  padding: 3rem 0 0 0;
+  text-align: center;
   color: #fff;
 }
 

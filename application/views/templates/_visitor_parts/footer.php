@@ -1,8 +1,7 @@
 		<footer id="footer" class="bg-one">
 			<div class="container">
-			    <div class="row wow fadeInUp" data-wow-duration="500ms">
-					<div class="col-lg-12">
-						
+			    <div class="row" >
+					<div class="col-lg-5">
 						<div class="social-icon">
 							<ul class="list-inline">
 							<?php foreach ($footers as $key => $footer) :
@@ -12,10 +11,11 @@
 								<?php endforeach; ?>
 							</ul>
 						</div>
-
-						<div class="copyright text-center">
-							<p>Theme Gerbong Solusi Management.
-								<br>.Technoindo.
+					</div>
+					<div class="col-lg-4"></div>
+					<div class="col-lg-3">
+						<div class="copyright">
+							<p>Gerbong Solusi Management. &copy; <span id="year"></span>
 							</p>
 						</div>
 					</div>
@@ -23,18 +23,6 @@
 			</div>
 		</footer>
 
-		<div id="scroll-up">
-			up
-		</div>
-		
-	    
-		
-		
-		
-		
-		
-		
-		
 
 
 		<!-- 
@@ -64,5 +52,8 @@
 		<!-- Custom js -->
 		<script type="text/javascript" src="<?= base_url('users-assets/')?>js/script.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>		
+		<script>
+			document.getElementById("year").innerHTML = new Date().getFullYear();
+		</script>
     </body>
 </html>

@@ -51,5 +51,8 @@
             #hex:hover + #text{
                 fill-opacity:1;
             }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
         </style>
     </head>
