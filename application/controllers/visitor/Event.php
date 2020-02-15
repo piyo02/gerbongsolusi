@@ -77,7 +77,7 @@ class Event extends Public_Controller {
         {
 			// echo 'oke'; die;
 			$data['event_id'] = $this->input->post( 'event_id' );
-			$data['comment_id'] = $this->input->post( 'comment_id' );
+			$data['comment_id'] = ( $this->input->post( 'comment_id' ) ) ? $this->input->post( 'comment_id' ) : NULL;
 			$data['visitor_id'] = $this->session->userdata('visitor_id');
 			$data['message'] = $this->input->post( 'message' );
 			$data['timestamp'] = time();
