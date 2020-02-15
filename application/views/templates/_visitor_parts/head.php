@@ -54,5 +54,13 @@
             .dropdown:hover .dropdown-menu {
                 display: block;
             }
+            #profil-content {
+                padding: 10px !important;
+            }
+            @media (max-width: 990px) {
+                #profil-content {
+                    padding: 10px 10px 10px 60px !important;
+                }
+            }
         </style>
     </head>

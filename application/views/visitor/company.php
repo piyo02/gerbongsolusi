@@ -22,7 +22,7 @@
 				<img class="img-responsive" src="<?= base_url('users-assets/') ?>images/about/img-profile.jpg" alt="" width="100%">
 			</div>
 			<div class="col-md-7">
-				<div class="content-block" style="padding: 10px 10px 10px 60px !important;">
+				<div class="content-block" id="profil-content">
 					<h2><b><?= $company->name ?></b></h2>
 					<?= $file_content ?>
 				</div>
