@@ -55,11 +55,11 @@
                 display: block;
             }
             #profil-content {
-                padding: 10px !important;
+                padding: 10px 10px 10px 60px !important;
             }
             @media (max-width: 990px) {
                 #profil-content {
-                    padding: 10px 10px 10px 60px !important;
+                    padding: 10px !important;
                 }
             }
         </style>
