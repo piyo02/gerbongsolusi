@@ -56,7 +56,7 @@ class Auth extends Public_Controller
     
         public function register() 
         {
-                redicect( site_url() );
+                redirect( site_url() );
                 // return;
                 $tables = $this->config->item('tables', 'ion_auth');
 		$identity_column = $this->config->item('identity', 'ion_auth');
