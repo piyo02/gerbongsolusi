@@ -6,7 +6,8 @@
         
         <meta name="author" content="Technoindo">
 		<meta name="google-signin-client_id" content="63926806032-7h9lldiirmvhqglkbnet8phiampbmitp.apps.googleusercontent.com">
-        <title><?= APP_NAME ?></title>
+        <title>Gerbong Solusi Management</title>
+        <!-- <title><?= APP_NAME ?></title> -->
 		
 		<!-- Mobile Specific Meta
 		================================================== -->
